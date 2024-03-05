@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Project</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./resources/styles.css" />
+    <script
+      defer=""
+      type="text/javascript"
+      src="//cdn.obamacareplans.com/js/09-KTZw/jquery-3.6.0,bootstrap-4.6.0,extensions,oo-utils,validate,health-form-validation,menu-sitelink,owl-carousel,owl-carousel-setup,health-index-client,oe-countdown,interactive-map"
+    ></script>
+    <!-- <link
+      href="//cdn.obamacareplans.com/css/09-KTZw/bootstrap-4.6.0,health-global,v2-health-global,health-results,owl-carousel,health-index,override-global,v2-b-override,v2-b-article-content-override,v1-ux-header"
+      rel="stylesheet"
+      type="text/css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script
+      src="https://www.amcharts.com/lib/3/ammap.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://www.amcharts.com/lib/3/maps/js/usaHigh.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://www.amcharts.com/lib/3/themes/light.js"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="top-bar sticky-sm-top text-center">
+        <span
+          ><a href="#">HealthPlans.com</a> is not a government website and is
+          privately owned.</span
+        >
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
+        <div class="container">
+          <a class="navbar-brand p-0" href="#"
+            ><img
+              src="./resources/images/logo.svg"
+              alt="logo"
+              height="50px"
+              width="auto"
+          /></a>
+          <div class="navbar" id="navbarNav">
+            <div>
+              <a href="tel:(844) 538-6414" class="globalHeader-phoneButton">
+                <span class="globalHeader-phoneCta mobileOnly"
+                  >Click to Call</span
+                >
+                <span class="globalHeader-phoneCta desktopOnly"
+                  >Talk to an Agent!</span
+                >
+                <span class="globalHeader-phoneNumber"
+                  ><span class="js-medicare-swap-inline" style="display: none"
+                    >1&nbsp;</span
+                  >(844) 538-6414<span
+                    class="js-medicare-swap"
+                    style="display: none"
+                    >&nbsp;TTY users 711</span
+                  ></span
+                >
+                <svg
+                  version="1.1"
+                  class="globalHeader-phoneIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 177.6 178.1"
+                  style="enable-background: new 0 0 177.6 178.1"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      d="M60.9,37.1c3.5,6,3.3,8.4-1.7,13.2c-4.1,4-8.9,7.5-13.1,11.4c-6,5.6-7,8.5-3.1,15.7c3.6,6.8,7.8,13.6,13,19.2
+                              c13.6,15,29.3,27.8,46.5,38.7c6.8,4.3,9.7,3.7,14.9-2.5c3.3-3.9,6.4-8.1,9.7-12c5-5.9,8-6.4,14.6-2.5c9.7,5.7,19.5,11.4,29.1,17.1
+                              c7.3,4.3,8.1,6.6,5,14.6c-6.5,17.1-25.3,29-44.1,28c-16.7-0.8-31.6-7.2-45.6-15.7C56.7,144.4,31.7,121.8,15,91.2
+                              C8.2,78.7,3.7,65.4,0.9,51.5c-3.7-19,4.2-32.9,18.9-43.7c4.5-3.3,3.1-2.3,8.8-6.4c3.6-2.6,9.6-1.5,12.5,3.2
+                              C60.9,37.1,60.9,37.1,60.9,37.1z"
+                    ></path>
+                  </g>
+                </svg>
+              </a>
+              <div class="phoneWait mobileOnly">
+                <span class="js-wait-full-message"
+                  >Estimated wait time:
+                  <span class="phoneWait-time"
+                    ><span class="js-wait-message"
+                      ><span class="js-wait-time">0</span> min</span
+                    ></span
+                  ></span
+                >
+              </div>
+              <script type="text/javascript">
+                var waitDate = new Date();
+                var waitHour = waitDate.getHours();
+                if (waitHour >= 0 && waitHour < 6) {
+                  document.querySelector(".js-wait-time").textContent = "0";
+                } else if (waitHour >= 9 && waitHour < 14) {
+                  document.querySelector(".js-wait-time").textContent = "2";
+                }
+              </script>
+              <span
+                class="globalHeader-phoneInfo js-medicare-swap"
+                style="display: none"
+                ><strong>Hours:</strong> 8am - 8pm,<br class="d-md-none" />
+                7 days a week</span
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- hero section -->
+      <main class="hero js-home hero-lander-v2" style="padding: 70px 0px">
+        <div class="hero-content text-center">
+          <h1 class="hero-headline text-center">
+            Shop Health Insurance Smarter
+          </h1>
+          <h2 class="hero-sub-headline">Find Out How Much You Can Save!</h2>
+          <form
+            id="zip-form"
+            class="hero-form js-validate-form"
+            novalidate="novalidate"
+            tp-global-watched="true"
+          >
+            <label for="zip">Enter Your ZIP Code</label>
+            <input
+              type="tel"
+              id="zip"
+              class="hero-zip-input js-zip"
+              name="zip"
+              maxlength="5"
+              value=""
+              aria-label="zip code"
+            />
+            <button type="submit" class="hero-submit">
+              View Plans
+              <svg
+                class="hero-submit-arrow"
+                width="25"
+                height="24"
+                viewBox="0 0 25 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.79289 5.29289C9.18342 4.90237 9.81658 4.90237 10.2071 5.29289L16.9142 12L10.2071 18.7071C9.81658 19.0976 9.18342 19.0976 8.79289 18.7071C8.40237 18.3166 8.40237 17.6834 8.79289 17.2929L14.0858 12L8.79289 6.70711C8.40237 6.31658 8.40237 5.68342 8.79289 5.29289Z"
+                ></path>
+              </svg>
+            </button>
+            <input
+              id="home-product"
+              name="product_placeholder"
+              type="hidden"
+              value="health"
+            />
+          </form>
+        </div>
+      </main>
+      <section
+        class="d-flex flex-column p-0 align-items-center js-home lander-v2"
+      >
+        <div class="carousel-title">Available Health Plans in Virginia:</div>
+        <div class="carousel-containes">
+          <div class="g">
+            <div style="width: 443px" class="d-flex align-items-center">
+              <div
+                class="owl-item active"
+                style="width: 211.4px; margin-right: 10px"
+              >
+                <div class="carrierCrousel-item">
+                  <img
+                    src="//dhe4oz50378wj.cloudfront.net/img/siteplatform/carriers/health/103.png"
+                    class="carrierCarousel-image"
+                    alt="carrier logo"
+                  />
+                </div>
+              </div>
+              <div
+                class="owl-item active"
+                style="width: 211.4px; margin-right: 10px"
+              >
+                <div class="carrierCarousel-item">
+                  <img
+                    src="//dhe4oz50378wj.cloudfront.net/img/siteplatform/carriers/health/6.png"
+                    class="carrierCarousel-image"
+                    alt="carrier logo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="owl-nav disabled">
+              <button type="button" role="presentation" class="owl-prev">
+                <span aria-label="Previous">‹</span></button
+              ><button type="button" role="presentation" class="owl-next">
+                <span aria-label="Next">›</span>
+              </button>
+            </div>
+            <div class="owl-dots disabled"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits section` -->
+      <section class="benefits js-home lander-v2">
+        <div class="benefits-title">
+          Find Your Plan in
+          <span style="white-space: nowrap">3 Easy Steps:</span>
+        </div>
+        <div class="d-flex flex-column align-items-center w-100">
+          <div class="benefit-step">
+            <img
+              class="benefit-step-icon"
+              src="//cdn.healthplans.com/img/location-zipcode.svg"
+              alt="location icon"
+            />
+            <div
+              class="d-flex flex-column align-items-start justify-content-center text-left"
+            >
+              <span class="benefit-step-number">Step 1</span>
+              <span class="benefit-step-title">Enter your Zip Code.</span>
+              <span class="benefit-step-description"
+                >This will help us provide you plan options in your area since
+                many insurance carriers only operate in certain states, or
+                certain parts of states.</span
+              >
+            </div>
+          </div>
+          <div class="benefit-step">
+            <img
+              class="benefit-step-icon"
+              src="//cdn.healthplans.com/img/pawn-info.svg"
+              alt="person icon"
+            />
+            <div
+              class="d-flex flex-column align-items-start justify-content-center text-left"
+            >
+              <span class="benefit-step-number">Step 2</span>
+              <span class="benefit-step-title"
+                >Complete your personal interview.</span
+              >
+              <span class="benefit-step-description"
+                >Tell us a little about yourself so we can match you with plans
+                tailored to what you need.</span
+              >
+            </div>
+          </div>
+          <div class="benefit-step">
+            <img
+              class="benefit-step-icon"
+              src="//cdn.healthplans.com/img/compare-quotes.svg"
+              alt="compare icon"
+            />
+            <div
+              class="d-flex flex-column align-items-start justify-content-center text-left"
+            >
+              <span class="benefit-step-number">Step 3</span>
+              <span class="benefit-step-title"
+                >See your custom plans and compare quotes.</span
+              >
+              <span class="benefit-step-description"
+                >We'll show you all of the plan options that fit your lifestyle
+                and your wallet. To help you make a better decision about your
+                health plan, we show you your Real Total Cost. This is what your
+                plan will cost you overall with premiums, co-pays, deductibles,
+                and any other out-of-pocket costs you might incur.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- States section -->
+      <section class="states js-home lander-v2">
+        <div class="states-title">
+          Prefer to search by state instead of Zip Code?
+        </div>
+        <div class="states-sub-title">
+          Choose Your State to Get Plan Options
+        </div>
+        <ul class="states-container js-select-state">
+          <li data-zip="99501">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Alaska
+          </li>
+          <li data-zip="35201">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Alabama
+          </li>
+          <li data-zip="72201">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Arkansas
+          </li>
+          <li data-zip="85001">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Arizona
+          </li>
+          <li data-zip="90001">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            California
+          </li>
+          <li data-zip="80123">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Colorado
+          </li>
+          <li data-zip="06601">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Connecticut
+          </li>
+          <li data-zip="20001">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            District of Columbia
+          </li>
+          <li data-zip="19801">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Delaware
+          </li>
+          <li data-zip="32099">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Florida
+          </li>
+          <li data-zip="30301">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Georgia
+          </li>
+          <li data-zip="96813">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Hawaii
+          </li>
+          <li data-zip="50301">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Iowa
+          </li>
+          <li data-zip="60290">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Illinois
+          </li>
+          <li data-zip="83701">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Idaho
+          </li>
+          <li data-zip="46201">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Indiana
+          </li>
+          <li data-zip="67201">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Kansas
+          </li>
+          <li data-zip="40201">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Kentucky
+          </li>
+          <li data-zip="70112">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Louisiana
+          </li>
+          <li data-zip="02108">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Massachusetts
+          </li>
+          <li data-zip="21117">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Maryland
+          </li>
+          <li data-zip="04101">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Maine
+          </li>
+          <li data-zip="48201">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Michigan
+          </li>
+          <li data-zip="55401">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Minnesota
+          </li>
+          <li data-zip="66101">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Missouri
+          </li>
+          <li data-zip="39201">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Mississippi
+          </li>
+          <li data-zip="59101">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Montana
+          </li>
+          <li data-zip="58102">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            North Dakota
+          </li>
+          <li data-zip="28201">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            North Carolina
+          </li>
+          <li data-zip="68022">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Nebraska
+          </li>
+          <li data-zip="03101">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            New Hampshire
+          </li>
+          <li data-zip="07101">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            New Jersey
+          </li>
+          <li data-zip="87101">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            New Mexico
+          </li>
+          <li data-zip="89101">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Nevada
+          </li>
+          <li data-zip="10001">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            New York
+          </li>
+          <li data-zip="43085">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Ohio
+          </li>
+          <li data-zip="73101">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Oklahoma
+          </li>
+          <li data-zip="97201">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Oregon
+          </li>
+          <li data-zip="19019">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Pennsylvania
+          </li>
+          <li data-zip="02901">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Rhode Island
+          </li>
+          <li data-zip="29201">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            South Carolina
+          </li>
+          <li data-zip="57101">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            South Dakota
+          </li>
+          <li data-zip="37501">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Tennessee
+          </li>
+          <li data-zip="77001">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Texas
+          </li>
+          <li data-zip="84101">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Utah
+          </li>
+          <li data-zip="23450">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Virginia
+          </li>
+          <li data-zip="05401">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Vermont
+          </li>
+          <li data-zip="98101">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Washington
+          </li>
+          <li data-zip="53202">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Wisconsin
+          </li>
+          <li data-zip="24701">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            West Virginia
+          </li>
+          <li data-zip="82001">
+            <img
+              src="//cdn.healthplans.com/img/map-pin.svg"
+              alt="map pin icon"
+            />
+            Wyoming
+          </li>
+        </ul>
+      </section>
+
+      <!-- About section -->
+      <section class="healthplans js-home lander-v2">
+        <div class="healthplans-description">
+          Healthplans.com is dedicated to making sure you’re informed about the
+          Affordable Care Act and health insurance. Click to see
+          <a href="/affordable-care-act-plans.html" target="_blank"
+            >our health insurance guides</a
+          >
+          and other useful information.
+        </div>
+        <img
+          src="//cdn.healthplans.com/img/article-photo.jpg"
+          alt="person using laptop"
+        />
+      </section>
+
+      <!-- Footer cta section -->
+      <section class="hero last js-home hero-lander-v2">
+        <h2 class="hero-sub-headline">Start Now!</h2>
+        <h3 class="hero-sub-text">
+          To see your personalized list of health plan options now, enter your
+          zip code.
+        </h3>
+        <form
+          class="hero-form js-validate-form"
+          novalidate="novalidate"
+          tp-global-watched="true"
+        >
+          <input
+            type="tel"
+            class="hero-zip-input js-zip"
+            name="zip"
+            maxlength="5"
+            value=""
+            aria-label="zip code"
+          />
+          <button type="submit" class="hero-submit">
+            View Plans
+            <svg
+              class="hero-submit-arrow"
+              width="25"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.79289 5.29289C9.18342 4.90237 9.81658 4.90237 10.2071 5.29289L16.9142 12L10.2071 18.7071C9.81658 19.0976 9.18342 19.0976 8.79289 18.7071C8.40237 18.3166 8.40237 17.6834 8.79289 17.2929L14.0858 12L8.79289 6.70711C8.40237 6.31658 8.40237 5.68342 8.79289 5.29289Z"
+                fill="#000"
+              ></path>
+            </svg>
+          </button>
+          <input
+            id="home-product"
+            name="product_placeholder"
+            type="hidden"
+            value="health"
+          />
+        </form>
+      </section>
+    </main>
+    <footer class="globalFooter">
+      <div class="container no-padding">
+        <div class="top-separation-line"></div>
+        <div class="globalFooter-upperSection">
+          <div class="globalFooter-upperText">
+            <div class="globalFooter-termsAndPrivacy">
+              <p class="globalFooter-labelText">Speak to an Agent</p>
+              <p>
+                <a
+                  class="globalFooter-telephoneNumSmall"
+                  href="tel:(844) 538-6414"
+                  >(844) 538-6414</a
+                >
+                <span class="health-hours js-health-swap"
+                  >Mon-Fri: 8am-10pm EST <br />Sat-Sun: 9am-5pm EST</span
+                >
+              </p>
+              <p style="margin-top: -30px"></p>
+            </div>
+            <div class="globalFooter-termsAndPrivacy">
+              <p class="globalFooter-labelText">QuoteLab, LLC</p>
+              <p>
+                700 S. Flower St. <br />Suite 640 <br />Los Angeles, CA 90017
+              </p>
+            </div>
+          </div>
+          <div class="globalFooter-bottomText">
+            <div class="globalFooter-termsAndPrivacy">
+              <a
+                href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                target="_blank"
+                class="globalFooter-labelText"
+              >
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="13.5"
+                  viewBox="0 0 16 13.5"
+                >
+                  <g transform="translate(0 -1.5)">
+                    <circle
+                      cx="1.75"
+                      cy="1.75"
+                      r="1.75"
+                      transform="translate(1 1.5)"
+                    ></circle>
+                    <circle
+                      cx="1.75"
+                      cy="1.75"
+                      r="1.75"
+                      transform="translate(11.5 1.5)"
+                    ></circle>
+                    <path
+                      d="M13.5,6a4.761,4.761,0,0,0-3.474,2.032,6.853,6.853,0,0,1-.879.868,1.666,1.666,0,0,1,.331,1.558A5.227,5.227,0,0,0,11,9.191V14a1,1,0,0,0,1,1h3a1,1,0,0,0,1-1V8.5A2.5,2.5,0,0,0,13.5,6Z"
+                    ></path>
+                    <path
+                      d="M7.8,9.25c-.693,0-1.144-.463-1.823-1.218A4.761,4.761,0,0,0,2.5,6,2.5,2.5,0,0,0,0,8.5V14a1,1,0,0,0,1,1H4a1,1,0,0,0,1-1V9.191A3.717,3.717,0,0,0,7.8,10.75a.75.75,0,1,0,0-1.5Z"
+                    ></path>
+                  </g>
+                </svg>
+                <p>Privacy Center</p>
+              </a>
+              <a
+                href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                target="_blank"
+                class="globalFooter-labelText"
+              >
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16"
+                  width="16"
+                  viewBox="0 0 16 16"
+                >
+                  <g>
+                    <path
+                      data-color="color-2"
+                      d="M3,8.23822V4.5C3,3.12158,4.12109,2,5.5,2S8,3.12158,8,4.5v2.60498L9.05853,7.2226 C9.64032,6.46423,10,5.52753,10,4.5C10,2.01855,7.98145,0,5.5,0S1,2.01855,1,4.5C1,6.0567,1.79529,7.42993,3,8.23822z"
+                    ></path>
+                    <path
+                      d="M13.89996,16l1.0661-3.55365c0.53821-1.79388-0.68073-3.6369-2.54218-3.84369L7,8V4.5 C7,3.67157,6.32843,3,5.5,3S4,3.67157,4,4.5V12H3v-2H2.5C1.67157,10,1,10.67157,1,11.5v1.83331 C1,14.28296,1.28461,15.20221,1.78973,16H13.89996z"
+                    ></path>
+                  </g>
+                </svg>
+                <p>
+                  Your Privacy Choices
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    id="Layer_1"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 30 14"
+                    height="12px"
+                    width="27px"
+                    style="enable-background: new 0 0 30 14; width: 27.5px"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <g id="final---dec.11-2020_1_">
+                        <g
+                          id="_x30_208-our-toggle_2_"
+                          transform="translate(-1275.000000, -200.000000)"
+                        >
+                          <g
+                            id="Final-Copy-2_2_"
+                            transform="translate(1275.000000, 200.000000)"
+                          >
+                            <path
+                              style="
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #ffffff;
+                              "
+                              d="M7.4,12.8h6.8l3.1-11.6H7.4C4.2,1.2,1.6,3.8,1.6,7S4.2,12.8,7.4,12.8z"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                      <g id="final---dec.11-2020">
+                        <g
+                          id="_x30_208-our-toggle"
+                          transform="translate(-1275.000000, -200.000000)"
+                        >
+                          <g
+                            id="Final-Copy-2"
+                            transform="translate(1275.000000, 200.000000)"
+                          >
+                            <path
+                              style="
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #0066ff;
+                              "
+                              d="M22.6,0H7.4c-3.9,0-7,3.1-7,7s3.1,7,7,7h15.2c3.9,0,7-3.1,7-7S26.4,0,22.6,0z M1.6,7c0-3.2,2.6-5.8,5.8-5.8      h9.9l-3.1,11.6H7.4C4.2,12.8,1.6,10.2,1.6,7z"
+                            ></path>
+                            <path
+                              id="x"
+                              style="fill: #ffffff"
+                              d="M24.6,4c0.2,0.2,0.2,0.6,0,0.8l0,0L22.5,7l2.2,2.2c0.2,0.2,0.2,0.6,0,0.8c-0.2,0.2-0.6,0.2-0.8,0      l0,0l-2.2-2.2L19.5,10c-0.2,0.2-0.6,0.2-0.8,0c-0.2-0.2-0.2-0.6,0-0.8l0,0L20.8,7l-2.2-2.2c-0.2-0.2-0.2-0.6,0-0.8      c0.2-0.2,0.6-0.2,0.8,0l0,0l2.2,2.2L23.8,4C24,3.8,24.4,3.8,24.6,4z"
+                            ></path>
+                            <path
+                              id="y"
+                              style="fill: #0066ff"
+                              d="M12.7,4.1c0.2,0.2,0.3,0.6,0.1,0.8l0,0L8.6,9.8C8.5,9.9,8.4,10,8.3,10c-0.2,0.1-0.5,0.1-0.7-0.1l0,0      L5.4,7.7c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0l0,0L8,8.6l3.8-4.5C12,3.9,12.4,3.9,12.7,4.1z"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </p>
+              </a>
+              <a
+                href="//insurance.mediaalpha.com/content/privacy-policy.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns#cookies-and-technologies"
+                target="_blank"
+                class="globalFooter-labelText"
+              >
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8,0a8,8,0,1,0,8,8A8.024,8.024,0,0,0,8,0ZM5,11a.945.945,0,0,1-1-1A.945.945,0,0,1,5,9a.945.945,0,0,1,1,1A.945.945,0,0,1,5,11ZM7,6A.945.945,0,0,1,6,5,.945.945,0,0,1,7,4,.945.945,0,0,1,8,5,.945.945,0,0,1,7,6Zm4,4a.945.945,0,0,1-1-1,.945.945,0,0,1,1-1,.945.945,0,0,1,1,1A.945.945,0,0,1,11,10Z"
+                  ></path>
+                </svg>
+                <p>Cookies and Other Technologies</p>
+              </a>
+              <a
+                href="//insurance.mediaalpha.com/content/terms-of-use.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                target="_blank"
+                class="globalFooter-labelText"
+              >
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="15.998"
+                  viewBox="0 0 16 15.998"
+                >
+                  <g transform="translate(0 0)">
+                    <path
+                      d="M16,1a1,1,0,0,0-1-1H10.45A4.47,4.47,0,0,0,7.268,1.318L3.293,5.293a1,1,0,0,0,0,1.414,2.6,2.6,0,0,0,3.437.214l2.687-2.09L13.61,9.024a1.2,1.2,0,0,1-.069,1.761l-.566.483L11.354,9.646a.5.5,0,0,0-.708.708l1.566,1.565-.855.731-1.5-1.5a.5.5,0,1,0-.708.708L10.594,13.3l-.138.118a1.988,1.988,0,0,1-1.824.407,1.981,1.981,0,0,0-.57-1.24L4.477,9a2,2,0,0,0-2.829,2.828l3.586,3.586a2,2,0,0,0,2.542.234,4.017,4.017,0,0,0,1.376.253,3.977,3.977,0,0,0,2.608-.965l3.08-2.63a3.108,3.108,0,0,0,1.16-2.3Z"
+                    ></path>
+                    <path
+                      d="M2,7V2H5A1,1,0,1,0,5,0H1A1,1,0,0,0,0,1V7A1,1,0,1,0,2,7Z"
+                    ></path>
+                  </g>
+                </svg>
+                <p>Terms of Use</p>
+              </a>
+            </div>
+
+            <div class="globalFooter-termsAndPrivacy">
+              <a
+                href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns#contact-us"
+                target="_blank"
+                class="globalFooter-labelText"
+              >
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15.96"
+                  height="15.893"
+                  viewBox="0 0 15.96 15.893"
+                >
+                  <g transform="translate(-0.053 -0.048)">
+                    <path
+                      d="M3.6,9.6v4.9a.741.741,0,0,0,1.3.5l2.3-2.7,4.7,3.5a.7.7,0,0,0,1.1-.4L16,.9a.714.714,0,0,0-1-.8L.5,5.9A.8.8,0,0,0,.3,7.2L1.9,8.4,6.5,6.2c.4-.2.7.3.4.5Z"
+                    ></path>
+                  </g>
+                </svg>
+                <p>Contact Us</p>
+              </a>
+              <a
+                href="//insurance.mediaalpha.com/content/privacy-policy.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                target="_blank"
+                class="globalFooter-labelText"
+              >
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12,10a2.994,2.994,0,0,0-2.5,1.347,3.42,3.42,0,0,0-3,0,3.007,3.007,0,1,0,.455,2.106,1.522,1.522,0,0,1,2.092,0A3,3,0,1,0,12,10ZM4,14a1,1,0,1,1,1-1A1,1,0,0,1,4,14Zm8,0a1,1,0,1,1,1-1A1,1,0,0,1,12,14Z"
+                  ></path>
+                  <path d="M12.8,4,12,0H4L3.2,4Z"></path>
+                  <path d="M13,5H3L0,8H16Z"></path>
+                </svg>
+                <p>Privacy Policy</p>
+              </a>
+              <a
+                href="//insurance.mediaalpha.com/content/privacy-policy.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns#special-notice-california"
+                target="_blank"
+                class="globalFooter-labelText"
+              >
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15.665"
+                  height="16"
+                  viewBox="0 0 15.665 16"
+                >
+                  <g transform="translate(-0.335 0)">
+                    <path
+                      d="M15,2a1,1,0,0,0-1,1V7a.5.5,0,0,1-.5.5h0A.5.5,0,0,1,13,7V1.553a1.037,1.037,0,0,0-.832-1.04A1,1,0,0,0,11,1.5V7a.5.5,0,0,1-.5.5h0A.5.5,0,0,1,10,7V1.053A1.037,1.037,0,0,0,9.168.014,1,1,0,0,0,8,1V7a.5.5,0,0,1-.5.5h0A.5.5,0,0,1,7,7V1.553A1.037,1.037,0,0,0,6.168.514,1,1,0,0,0,5,1.5V9.293a.5.5,0,0,1-.854.354l-2-2A1.081,1.081,0,0,0,.911,7.4,1.032,1.032,0,0,0,.469,8.834L2.78,12.942A6,6,0,0,0,8.009,16H10a6,6,0,0,0,6-6V3A1,1,0,0,0,15,2Z"
+                    ></path>
+                  </g>
+                </svg>
+                <p>California Privacy Choices</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="separation-line"></div>
+        <section id="footerDisclaimer" class="footerDisclaimer">
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const defaultMedicarePlan =
+                'TPMO Disclaimer: We do not offer every plan available in your area.  Currently we represent [73] organizations which offer [5110] products in your area. Please contact <a href="https://www.medicare.gov/" target="_blank" rel=”nofollow”>Medicare.gov</a> or 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options.<br>Please note that these numbers provided are not specific to your area but rather represent the number of organizations and the number of products available on a national basis. We will connect you with licensed insurance agents who can provide information about the number of organizations they represent and the number of products they offer in your service area.';
+
+              $("body").on("get-medicare-disclaimer", function (event, zip) {
+                if (zip) {
+                  $.getJSON(
+                    "//insurance.mediaalpha.com/medicare-plans.json" +
+                      "?zip=" +
+                      zip +
+                      "&placement_id=" +
+                      "UhjXj9Xn-j2WV29jKxM3B5ntfrnQnQ" +
+                      "&api_token=" +
+                      "ABIROAAAAAAAAAEGV6O7QQ2TKU" +
+                      "&plan_type=local ppo&plan_type=hmo&plan_type=msa&plan_type=Regional PPO&plan_type=PFFS",
+                    function (data) {
+                      if (data && data.num_plans) {
+                        const medicarePlan =
+                          "TPMO Disclaimer: We do not offer every plan available in your area.  Currently we represent [" +
+                          data.num_organizations +
+                          "] organizations which offer [" +
+                          data.num_plans +
+                          '] products in your area. Please contact <a href="https://www.medicare.gov/" target="_blank" rel=”nofollow”>Medicare.gov</a> or 1-800-MEDICARE , or your local State Health Insurance Program (SHIP) to get information on all of your options.';
+                        $(".js-medicare-plan").html(medicarePlan);
+                      } else {
+                        $(".js-medicare-plan").html(defaultMedicarePlan);
+                      }
+                    }
+                  );
+                } else {
+                  $(".js-medicare-plan").html(defaultMedicarePlan);
+                }
+              });
+
+              let currentZip = oo.getParam("zip") ? oo.getParam("zip") : null;
+              $("body").trigger("get-medicare-disclaimer", [currentZip]);
+            });
+          </script>
+          <style>
+            .footerDisclaimer-arrow {
+              transform: rotate(90deg);
+              display: inline-block;
+            }
+
+            @media (min-width: 768px) {
+              .footerDisclaimer-arrow {
+                display: none;
+              }
+            }
+            .footerDisclaimer-medicare {
+              display: none;
+            }
+          </style>
+
+          <div
+            class="footerDisclaimer-title"
+            data-bs-toggle="collapse"
+            data-bs-target=".disclaimerBox"
+            data-toggle="collapse"
+            data-target=".disclaimerBox"
+            role="button"
+            aria-expanded="false"
+          >
+            <p>
+              <strong class="footerDisclaimer-health js-health-swap">
+                Important Information:
+                <svg
+                  version="1.1"
+                  class="footerDisclaimer-arrow mobileOnly"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 330 512"
+                  style="enable-background: new 0 0 330 512"
+                  xml:space="preserve"
+                  width="10"
+                  height="10"
+                >
+                  <g>
+                    <polygon
+                      points="0,72 72,0 330,256 74,512 0,438 186,256"
+                    ></polygon>
+                  </g>
+                </svg>
+              </strong>
+              <strong class="footerDisclaimer-medicare js-medicare-swap">
+                Disclaimer:
+                <svg
+                  version="1.1"
+                  class="footerDisclaimer-arrow mobileOnly"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 330 512"
+                  style="enable-background: new 0 0 330 512"
+                  xml:space="preserve"
+                  width="10"
+                  height="10"
+                >
+                  <g>
+                    <polygon
+                      points="0,72 72,0 330,256 74,512 0,438 186,256"
+                    ></polygon>
+                  </g>
+                </svg>
+              </strong>
+            </p>
+          </div>
+
+          <div class="disclaimerBox footerDisclaimer-text" role="tabpanel">
+            <div class="footerDisclaimer-medicare js-medicare-swap">
+              <p>
+                HealthPlans.com is operated by Quotelab, LLC, which is an
+                independent broker and is not a federal or state Marketplace
+                website. This website is owned and operated by QuoteLab, LLC, a
+                licensed insurance agency, NPN #19911386. Invitations for
+                application for health insurance on QuoteLab, LLC, only where
+                licensed and appointed. License numbers are available upon
+                request and are provided where required by law. QuoteLab's
+                license information can be found at
+                <a
+                  href="https://www.quotelab.com/licenses.html"
+                  target="_blank"
+                  rel="noopener"
+                  >https://www.quotelab.com/licenses.html</a
+                >.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Federal Contracting Statement: Plans are insured or covered by a
+                Medicare Advantage organization with a Medicare contract and/or
+                a Medicare-approved Part D sponsor. Enrollment in the plan
+                depends on the plan’s contract renewal with Medicare.
+              </p>
+              <p
+                class="footerDisclaimer-medicare js-medicare-swap js-medicare-plan"
+              >
+                TPMO Disclaimer: We do not offer every plan available in your
+                area. Currently we represent [73] organizations which offer
+                [5110] products in your area. Please contact
+                <a
+                  href="https://www.medicare.gov/"
+                  target="_blank"
+                  rel="”nofollow”"
+                  >Medicare.gov</a
+                >
+                or 1-800-MEDICARE, or your local State Health Insurance Program
+                (SHIP) to get information on all of your options.<br />Please
+                note that these numbers provided are not specific to your area
+                but rather represent the number of organizations and the number
+                of products available on a national basis. We will connect you
+                with licensed insurance agents who can provide information about
+                the number of organizations they represent and the number of
+                products they offer in your service area.
+              </p>
+              <p>
+                Submitting this form does NOT affect your current enrollment,
+                nor will it enroll you in a Medicare Advantage plan, Medicare
+                Prescription Drug plan, Medicare Supplement Plan, or any other
+                Medicare plan. QuoteLab, LLC is independent of the Medicare
+                program and is neither associated with nor endorsed by The
+                Centers for Medicare &amp; Medicaid Services (CMS) or any other
+                governmental agency.
+              </p>
+              <p>
+                The plans represented on HealthPlans.com are Medicare Advantage
+                HMO, PPO and PFFS organizations and stand-alone prescription
+                drug plans with a Medicare contract. Enrollment in any plan
+                depends on contract renewal. If you are paying Medicare Part B
+                premium, you must continue to pay it to maintain coverage.
+              </p>
+
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Not all plans offer all of these benefits. Benefits may vary by
+                carrier and location. Limitations and exclusions may apply.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Every year, Medicare evaluates plans based on a 5-star rating
+                system.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Part B Premium give-back is not available with all plans.
+                Availability varies by carrier and location. Actual Part B
+                premium reduction could be lower. Deductibles, copays and
+                coinsurance may apply.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Based on median Medicare Advantage benefit amounts for dental
+                available across multiple plans and metro areas. Not all
+                benefits available in specific plans or regions.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                This information is not a complete description of benefits.
+                Contact the plan for more information.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Limitations, copayments, and restrictions may apply.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                [Benefits, premiums and/or copayments/coinsurance] may change on
+                January 1 of each year.
+              </p>
+
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Enrollment in a plan may be limited to certain times of the year
+                unless you qualify for a special [election/enrollment] period or
+                you are in your Medicare Initial Election Period.
+              </p>
+
+              <p>Advertised Pricing:</p>
+
+              <p>
+                There are several factors that impact your monthly premium;
+                including your age, geographical location, annual income,
+                dependents, and the type of plan you choose. Monthly premiums do
+                not include out-of-pocket costs.
+              </p>
+            </div>
+
+            <div class="footerDisclaimer-health js-health-swap">
+              <p>
+                HealthPlans.com is operated by QuoteLab, LLC, which is an
+                independent broker and is not a federal or state insurance
+                Marketplace or other website. It does not provide access to any
+                federal or state marketplace or exchange. This website is owned
+                and operated by QuoteLab, LLC, a licensed insurance agency, NPN
+                #19911386. Invitations for application for health insurance are
+                made through QuoteLab, LLC, only where licensed and appointed.
+                License numbers are available upon request and are provided
+                where required by law. QuoteLab's license information can be
+                found at
+                <a
+                  href="https://www.quotelab.com/licenses.html"
+                  target="_blank"
+                  rel="noopener"
+                  >https://www.quotelab.com/licenses.html</a
+                >.
+              </p>
+
+              <p>
+                This website does not provide information about specific health
+                plans, or enable visitors to obtain insurance quotes, on this
+                website. However, if you provide your information and consent,
+                we will transfer your information to insurance carriers and
+                brokers that may contact you to offer Affordable Care Act (ACA)
+                plans, short-term plans, medical indemnity plans and/or
+                healthcare sharing ministry plans, and we will receive
+                compensation for such transfer. The advertisements appearing on
+                this website are placed by clients from which QuoteLab, LLC
+                receives compensation, and such compensation may impact whether
+                such advertisements appear on this website and the order in
+                which they appear.
+              </p>
+
+              <p>
+                HealthPlans.com is required to comply with all applicable
+                federal law, including the standards established under 45 CFR
+                155.220(c) and (d) and standards established under 45 CFR
+                155.260 to protect the privacy and security of personally
+                identifiable information. This website does not provide a
+                complete listing of, or display all data on all Qualified Health
+                Plans being offered in your state or service area through the
+                Marketplace website or the federal Medicare program. To see all
+                available data on Qualified Health Plan options in your state,
+                visit your state Marketplace website, go to the Health Insurance
+                Marketplace website at https://www.healthcare.gov.
+              </p>
+
+              <p>
+                This site uses cookies and tech to collect data needed for our
+                services to work including to process your requests, personalize
+                your experience, and measure the effectiveness of content we
+                show you, among other business purposes (<a
+                  href="//insurance.mediaalpha.com/content/privacy-policy.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns#information-we-collect-automatically"
+                  target="_blank"
+                  >Learn More</a
+                >). We share this data with the business partners we connect you
+                with, who may combine it with data you provide to them or they
+                collect from you (<a
+                  href="//insurance.mediaalpha.com/content/privacy-policy.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns#how-we-use-your-information"
+                  target="_blank"
+                  >Learn More</a
+                >). To learn more about cookies and how to disable them, read
+                our
+                <a
+                  href="//insurance.mediaalpha.com/content/privacy-policy.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns#cookies-and-technologies"
+                  target="_blank"
+                  >Privacy Policy</a
+                >.
+              </p>
+            </div>
+          </div>
+        </section>
+        <p class="globalFooter-copyrightText">
+          Copyright ©2024 Quotelab, LLC
+          <span style="white-space: nowrap">All Rights Reserved.</span>
+        </p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
