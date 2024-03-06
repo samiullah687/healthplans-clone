@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 :root {
   --primary-color: #fff;
   --secondary-color: #000;
@@ -39,13 +38,13 @@ h3 {
   font-weight: 700;
 }
 p {
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .top-bar {
   background-color: #faf9e5;
   color: #707070;
   font-size: 12px;
-  min-height: 35px !important;
+  min-height: 28px !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,6 +53,19 @@ p {
   color: #707070 !important;
   font-weight: bold;
   text-decoration: none;
+}
+.globalHeader {
+  width: 100%;
+  padding: 0;
+  box-shadow: none;
+  border-bottom: 1px solid #bfbfbf;
+  border-radius: 0;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  height: 76px;
 }
 header p {
   font-size: 20px;
@@ -82,6 +94,7 @@ header h5 a:hover {
     text-align: right;
     line-height: 1.4;
     text-decoration: none;
+    position: relative;
   }
   .globalHeader-phoneNumber {
     font-weight: 700;
@@ -96,10 +109,52 @@ header h5 a:hover {
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 32px;
-    right: 165px;
+    top: 28px;
     left: auto;
-    right: 179px;
+    right: 170px;
+  }
+}
+@media (max-width: 767px) {
+  .globalHeader {
+    height: 63px;
+    padding: 8px 0px !important;
+  }
+  .globalHeader-phoneButton {
+    background: var(--tertiary-color);
+    padding: 8px 20px 8px 35px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.1;
+    color: #000;
+    display: flex;
+    text-decoration: none;
+    padding: 8px 20px;
+  }
+  .globalHeader-phoneNumber {
+    font-weight: 700;
+    /* display: block; */
+  }
+  .globalHeader-logoContainer {
+    padding-left: 15px;
+    padding-right: 0;
+  }
+  .globalHeader-phoneContainer {
+    padding-right: 15px;
+  }
+  .globalHeader-phoneIcon {
+    width: 12px;
+    height: 12px;
+    top: 9px;
+    left: 19px;
+  }
+  .phoneWait {
+    font-size: 12px;
+    text-align: center;
+  }
+  .phoneWait-time {
+    font-weight: 700;
+    color: #000;
   }
 }
 
@@ -187,7 +242,13 @@ h1.hero-headline {
   width: 50%;
   border-radius: 0 5px 5px 0;
 }
-
+.hero-submit:hover {
+  background-color: #ffe458;
+}
+.logos {
+  padding: 20px;
+  width: 680px;
+}
 .carousel-title {
   font-weight: 700;
   padding: 8px;
@@ -197,10 +258,11 @@ h1.hero-headline {
   color: var(--primary-color);
   background-color: var(--secondary-text-color);
   width: 100%;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
 }
 .carrierCarousel-item {
-  width: 120px;
+  width: 120px !important;
+  height: 57px !important;
   margin: auto;
 }
 .carrierCarousel-image {
@@ -208,6 +270,53 @@ h1.hero-headline {
   max-width: 100%;
   width: auto;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .logos {
+    padding: 5px !important;
+    width: 380px;
+  }
+  .carrierCarousel-image {
+    width: 100px !important;
+    height: auto;
+  }
+  .hero-content,
+  .hero-form {
+    width: 100%;
+  }
+  .hero {
+    padding: 19px 12px !important;
+  }
+  .hero-headline {
+    font-size: 20px !important;
+    line-height: 25px;
+    margin-bottom: 0;
+    color: var(--secondary-text-color);
+  }
+  .hero-sub-headline {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+  .hero-form label {
+    height: 37px;
+    display: flex;
+    background: var(--secondary-text-color);
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .hero-submit,
+  .hero-zip-input {
+    display: block;
+    width: 100%;
+    height: 56px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+  }
 }
 /* Hero Section End */
 
@@ -323,9 +432,10 @@ h1.hero-headline {
   }
   .healthplans img {
     width: 375px;
+    border-radius: 30px 0 !important;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .healthplans-description {
     font-weight: 500;
     font-size: 20px;
@@ -334,7 +444,7 @@ h1.hero-headline {
 
   .healthplans img {
     width: 352px;
-    border-radius: 30px 0;
+    border-radius: 30px 0 !important;
   }
   .healthplans {
     justify-content: center;
@@ -347,6 +457,133 @@ h1.hero-headline {
 }
 /* About Section End */
 
+/* Result Section Start */
+.resultsHeader__cta {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .resultsHeader {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    background: #3498db;
+  }
+  .resultsHeader__cta {
+    font-size: 28px;
+  }
+}
+.resultsHeader {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: var(--primary-color);
+  background: #3498db;
+}
+/* Result Section End */
+
+/* Quotes Section Start */
+.formText {
+  background: #1f77b2;
+  padding-bottom: 30px;
+  text-align: center;
+  padding-top: 30px;
+}
+.formText-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.formText-subtitle {
+  color: var(--primary-color);
+}
+.formNav {
+  background: #1f77b2;
+  color: var(--primary-color);
+}
+@media (min-width: 768px) {
+  .formText-title {
+    font-size: 28px;
+    line-height: 1.1;
+    font-family: "Roboto Slab";
+  }
+  .formText-subtitle {
+    font-size: 16px;
+  }
+  .formNav {
+    background: #195f8e;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+/* from Section Start */
+.formHolder-leftSection {
+  display: none;
+}
+.formHolder-carrier {
+  margin-top: 35px;
+}
+.formHolder-carrierItem {
+  border: 1px solid #ccc;
+  margin: 10px auto;
+  width: 168px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.formHolder-list {
+  height: 100px;
+  margin: 20px 0 0;
+  padding-left: 30px;
+}
+.formHolder-list li {
+  font-size: 15px;
+  list-style-type: none;
+  color: #2d2d2d;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 35px;
+  min-height: 30px;
+  position: relative;
+  font-weight: 700;
+}
+.formHolder-listIcon {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  fill: #000;
+  height: 20px;
+  width: 20px;
+}
+@media (min-width: 992px) {
+  .formHolder-leftSection {
+    display: block;
+  }
+}
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  min-width: 320px;
+  max-width: 680px;
+  margin: 40px auto;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 3px 3px, rgba(0, 0, 0, 0.03) 0px 9px 7px,
+    rgba(0, 0, 0, 0.04) 0px 18px 14px, rgba(0, 0, 0, 0.05) 0px 36px 30px,
+    rgba(0, 0, 0, 0.07) 0px 100px 80px;
+  border-radius: 10px;
+  border: 1px solid rgb(242, 242, 242);
+  background-color: rgb(255, 255, 255);
+}
+/* from Section End */
+
+/* Quotes Section End */
+
 /* Footer CTA Start */
 @media (min-width: 1200px) {
   .last {
@@ -356,7 +593,7 @@ h1.hero-headline {
 }
 @media (min-width: 768px) {
   .last {
-    display: flex;
+    display: flex !important;
     background: var(--secondary-text-color);
     color: var(--primary-color);
     padding: 40px 36px;
@@ -375,6 +612,9 @@ h1.hero-headline {
     line-height: 40px;
     margin-bottom: 0;
   }
+  .last .hero-form {
+    width: 360px;
+  }
 }
 
 /* Footer CTA End */
@@ -385,7 +625,7 @@ h1.hero-headline {
   font-size: 16px;
   padding-top: 15px;
   padding-bottom: 80px;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   background-color: var(--primary-color);
   color: var(--primary-text-color);
@@ -402,7 +642,11 @@ h1.hero-headline {
   line-height: 125%;
   text-decoration: none;
 }
-
+.globalFooter-telephoneNumSmall {
+  font-size: 16px;
+  color: var(--primary-text-color) !important;
+  text-decoration: none;
+}
 @media (min-width: 768px) {
   .globalFooter-upperSection {
     display: flex;
@@ -445,6 +689,14 @@ h1.hero-headline {
 @media (min-width: 768px) {
   .desktopOnly {
     display: block;
+  }
+}
+@media (max-width: 768px) {
+  .desktopOnly1 {
+    display: none;
+  }
+  .desktopOnly {
+    display: none;
   }
 }
 @media (min-width: 768px) {

@@ -11,11 +11,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./resources/styles.css" />
-    <script
+    <!-- <script
       defer=""
       type="text/javascript"
       src="//cdn.obamacareplans.com/js/09-KTZw/jquery-3.6.0,bootstrap-4.6.0,extensions,oo-utils,validate,health-form-validation,menu-sitelink,owl-carousel,owl-carousel-setup,health-index-client,oe-countdown,interactive-map"
-    ></script>
+    ></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
     <!-- <link
       href="//cdn.obamacareplans.com/css/09-KTZw/bootstrap-4.6.0,health-global,v2-health-global,health-results,owl-carousel,health-index,override-global,v2-b-override,v2-b-article-content-override,v1-ux-header"
       rel="stylesheet"
@@ -32,6 +36,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <link rel="stylesheet" href="./resources/form/css/demo.css" />
   </head>
   <body>
     <div class="top-bar sticky-sm-top text-center">
@@ -41,21 +47,16 @@
       >
     </div>
 
-    <header class="globalHeader sticky-sm-top">
+    <header class="globalHeader">
       <div class="container">
         <div class="row align-items-center globalHeader-row">
           <div class="col-6 globalHeader-logoContainer">
             <a href="/"
               ><img
                 src="//cdn.healthplans.com/img/logo-color-2.svg"
-                class="globalHeader-logo desktopOnly1"
+                class="globalHeader-logo"
                 alt="HealthPlans.com"
                 width="250"
-                height="50" /><img
-                src="//cdn.healthplans.com/img/logo-color-2.svg"
-                class="globalHeader-logo mobileOnly"
-                alt="HealthPlans.com"
-                width="180"
                 height="50"
             /></a>
           </div>
@@ -67,9 +68,18 @@
                 <span class="globalHeader-phoneCta desktopOnly"
                   >Talk to an Agent!</span
                 >
+                <span class="globalHeader-phoneNumber"
+                  ><span class="js-medicare-swap-inline" style="display: none"
+                    >1&nbsp;</span
+                  >(844) 538-6414<span
+                    class="js-medicare-swap"
+                    style="display: none"
+                    >&nbsp;TTY users 711</span
+                  ></span
+                >
                 <svg
                   version="1.1"
-                  class="globalHeader-phoneIcon me-2"
+                  class="globalHeader-phoneIcon"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
                   x="0px"
@@ -88,7 +98,6 @@
                     ></path>
                   </g>
                 </svg>
-                <span class="globalHeader-phoneNumber">(844) 538-6414</span>
               </a>
               <div class="phoneWait mobileOnly">
                 <span class="js-wait-full-message"
@@ -122,616 +131,249 @@
     </header>
     <main>
       <!-- hero section -->
-      <main class="hero js-home hero-lander-v2" style="padding: 70px 0px">
-        <div class="hero-content text-center">
-          <h1 class="hero-headline text-center">
-            Shop Health Insurance Smarter
-          </h1>
-          <h2 class="hero-sub-headline">Find Out How Much You Can Save!</h2>
-          <form
-            id="zip-form"
-            class="hero-form js-validate-form"
-            novalidate="novalidate"
-            tp-global-watched="true"
-          >
-            <label for="zip">Enter Your ZIP Code</label>
-            <input
-              type="tel"
-              id="zip"
-              class="hero-zip-input js-zip"
-              name="zip"
-              maxlength="5"
-              value=""
-              aria-label="zip code"
-            />
-            <button type="submit" class="hero-submit">
-              View Plans
-              <svg
-                class="hero-submit-arrow"
-                width="25"
-                height="24"
-                viewBox="0 0 25 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M8.79289 5.29289C9.18342 4.90237 9.81658 4.90237 10.2071 5.29289L16.9142 12L10.2071 18.7071C9.81658 19.0976 9.18342 19.0976 8.79289 18.7071C8.40237 18.3166 8.40237 17.6834 8.79289 17.2929L14.0858 12L8.79289 6.70711C8.40237 6.31658 8.40237 5.68342 8.79289 5.29289Z"
-                ></path>
-              </svg>
-            </button>
-            <input
-              id="home-product"
-              name="product_placeholder"
-              type="hidden"
-              value="health"
-            />
-          </form>
-        </div>
-      </main>
-      <section
-        class="d-flex flex-column p-0 align-items-center js-home lander-v2"
-      >
-        <div class="carousel-title">Available Health Plans in Virginia:</div>
-        <div class="carousel-containes">
-          <div class="logos">
-            <div class="d-flex align-items-center">
-              <div class="carrierCarousel-item">
-                <img
-                  src="./resources/images/logo-1.png"
-                  class="carrierCarousel-image"
-                  alt="carrier logo"
-                />
-              </div>
-              <div class="carrierCarousel-item">
-                <img
-                  src="./resources/images/logo-2.png"
-                  class="carrierCarousel-image"
-                  alt="carrier logo"
-                />
-              </div>
-              <div class="carrierCarousel-item">
-                <img
-                  src="./resources/images/logo-2.png"
-                  class="carrierCarousel-image"
-                  alt="carrier logo"
-                />
-              </div>
-            </div>
-            <div class="owl-nav disabled">
-              <button type="button" role="presentation" class="owl-prev">
-                <span aria-label="Previous">‹</span></button
-              ><button type="button" role="presentation" class="owl-next">
-                <span aria-label="Next">›</span>
-              </button>
-            </div>
-            <div class="owl-dots disabled"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Benefits section` -->
-      <section class="benefits js-home lander-v2 desktopOnly1">
-        <div class="benefits-title">
-          Find Your Plan in
-          <span style="white-space: nowrap">3 Easy Steps:</span>
-        </div>
-        <div class="d-flex flex-column align-items-center w-100">
-          <div class="benefit-step">
-            <img
-              class="benefit-step-icon"
-              src="//cdn.healthplans.com/img/location-zipcode.svg"
-              alt="location icon"
-            />
-            <div
-              class="d-flex flex-column align-items-start justify-content-center text-left"
-            >
-              <span class="benefit-step-number">Step 1</span>
-              <span class="benefit-step-title">Enter your Zip Code.</span>
-              <span class="benefit-step-description"
-                >This will help us provide you plan options in your area since
-                many insurance carriers only operate in certain states, or
-                certain parts of states.</span
-              >
-            </div>
-          </div>
-          <div class="benefit-step">
-            <img
-              class="benefit-step-icon"
-              src="//cdn.healthplans.com/img/pawn-info.svg"
-              alt="person icon"
-            />
-            <div
-              class="d-flex flex-column align-items-start justify-content-center text-left"
-            >
-              <span class="benefit-step-number">Step 2</span>
-              <span class="benefit-step-title"
-                >Complete your personal interview.</span
-              >
-              <span class="benefit-step-description"
-                >Tell us a little about yourself so we can match you with plans
-                tailored to what you need.</span
-              >
-            </div>
-          </div>
-          <div class="benefit-step">
-            <img
-              class="benefit-step-icon"
-              src="//cdn.healthplans.com/img/compare-quotes.svg"
-              alt="compare icon"
-            />
-            <div
-              class="d-flex flex-column align-items-start justify-content-center text-left"
-            >
-              <span class="benefit-step-number">Step 3</span>
-              <span class="benefit-step-title"
-                >See your custom plans and compare quotes.</span
-              >
-              <span class="benefit-step-description"
-                >We'll show you all of the plan options that fit your lifestyle
-                and your wallet. To help you make a better decision about your
-                health plan, we show you your Real Total Cost. This is what your
-                plan will cost you overall with premiums, co-pays, deductibles,
-                and any other out-of-pocket costs you might incur.</span
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- States section -->
-      <section
-        class="states js-home lander-v2 d-xs-none desktopOnly1 d-md-flex"
-      >
-        <div class="states-title">
-          Prefer to search by state instead of Zip Code?
-        </div>
-        <div class="states-sub-title">
-          Choose Your State to Get Plan Options
-        </div>
-        <ul class="states-container js-select-state">
-          <li data-zip="99501">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Alaska
-          </li>
-          <li data-zip="35201">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Alabama
-          </li>
-          <li data-zip="72201">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Arkansas
-          </li>
-          <li data-zip="85001">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Arizona
-          </li>
-          <li data-zip="90001">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            California
-          </li>
-          <li data-zip="80123">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Colorado
-          </li>
-          <li data-zip="06601">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Connecticut
-          </li>
-          <li data-zip="20001">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            District of Columbia
-          </li>
-          <li data-zip="19801">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Delaware
-          </li>
-          <li data-zip="32099">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Florida
-          </li>
-          <li data-zip="30301">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Georgia
-          </li>
-          <li data-zip="96813">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Hawaii
-          </li>
-          <li data-zip="50301">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Iowa
-          </li>
-          <li data-zip="60290">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Illinois
-          </li>
-          <li data-zip="83701">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Idaho
-          </li>
-          <li data-zip="46201">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Indiana
-          </li>
-          <li data-zip="67201">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Kansas
-          </li>
-          <li data-zip="40201">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Kentucky
-          </li>
-          <li data-zip="70112">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Louisiana
-          </li>
-          <li data-zip="02108">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Massachusetts
-          </li>
-          <li data-zip="21117">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Maryland
-          </li>
-          <li data-zip="04101">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Maine
-          </li>
-          <li data-zip="48201">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Michigan
-          </li>
-          <li data-zip="55401">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Minnesota
-          </li>
-          <li data-zip="66101">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Missouri
-          </li>
-          <li data-zip="39201">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Mississippi
-          </li>
-          <li data-zip="59101">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Montana
-          </li>
-          <li data-zip="58102">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            North Dakota
-          </li>
-          <li data-zip="28201">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            North Carolina
-          </li>
-          <li data-zip="68022">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Nebraska
-          </li>
-          <li data-zip="03101">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            New Hampshire
-          </li>
-          <li data-zip="07101">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            New Jersey
-          </li>
-          <li data-zip="87101">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            New Mexico
-          </li>
-          <li data-zip="89101">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Nevada
-          </li>
-          <li data-zip="10001">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            New York
-          </li>
-          <li data-zip="43085">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Ohio
-          </li>
-          <li data-zip="73101">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Oklahoma
-          </li>
-          <li data-zip="97201">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Oregon
-          </li>
-          <li data-zip="19019">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Pennsylvania
-          </li>
-          <li data-zip="02901">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Rhode Island
-          </li>
-          <li data-zip="29201">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            South Carolina
-          </li>
-          <li data-zip="57101">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            South Dakota
-          </li>
-          <li data-zip="37501">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Tennessee
-          </li>
-          <li data-zip="77001">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Texas
-          </li>
-          <li data-zip="84101">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Utah
-          </li>
-          <li data-zip="23450">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Virginia
-          </li>
-          <li data-zip="05401">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Vermont
-          </li>
-          <li data-zip="98101">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Washington
-          </li>
-          <li data-zip="53202">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Wisconsin
-          </li>
-          <li data-zip="24701">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            West Virginia
-          </li>
-          <li data-zip="82001">
-            <img
-              src="//cdn.healthplans.com/img/map-pin.svg"
-              alt="map pin icon"
-            />
-            Wyoming
-          </li>
-        </ul>
-      </section>
-
-      <!-- About section -->
-      <section class="healthplans js-home lander-v2 desktopOnly1 d-md-flex">
-        <div class="healthplans-description">
-          Healthplans.com is dedicated to making sure you’re informed about the
-          Affordable Care Act and health insurance. Click to see
-          <a href="/affordable-care-act-plans.html" target="_blank"
-            >our health insurance guides</a
-          >
-          and other useful information.
-        </div>
-        <img
-          src="//cdn.healthplans.com/img/article-photo.jpg"
-          alt="person using laptop"
-        />
-      </section>
-
-      <!-- Result section -->
-      <!-- <section class="resultsHeader js-results">
+      <section class="formText js-form-page">
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <div class="results__lbHolder">
-                <div class="resultsHeader__cta">
-                  Still looking for rates? HealthPlans.com, a licensed health
-                  insurance broker, can help you get a competitive quote.
-                  <br />
-                  <a href="/quotes.html">Get Started</a>
+              <div class="formText-title">
+                Good News! There are Multiple Health Options Available in
+                Delaware
+              </div>
+              <div class="formText-subtitle">
+                Help us find the plans that are best for you. All of the
+                Information that you provide to us is secured and will only be
+                used to provide you with quotes.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="formNav js-form-page">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">Step 1: Enter Your ZipCode</div>
+            <div class="col-4 formNav-activeText" style="font-weight: bold">
+              Step 2: Tell Us About Yourself
+            </div>
+            <div class="col-4">Step 3: Compare Plans and Prices</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- step form section -->
+      <section class="formHolder">
+        <div class="container">
+          <div class="row">
+            <div class="formHolder-leftSection col-3 js-form-page">
+              <div class="formHolder-carrier">
+                <div class="formHolder-carrierItem">
+                  <img
+                    src="//dhe4oz50378wj.cloudfront.net/img/siteplatform/carriers/health/103.png"
+                    class="formHolder-carrierImage w-100"
+                    alt="103 logo"
+                  />
+                </div>
+                <div class="formHolder-carrierItem">
+                  <img
+                    src="//dhe4oz50378wj.cloudfront.net/img/siteplatform/carriers/health/70.png"
+                    class="formHolder-carrierImage w-100"
+                    alt="70 logo"
+                  />
+                </div>
+                <div class="formHolder-carrierItem">
+                  <img
+                    src="//dhe4oz50378wj.cloudfront.net/img/siteplatform/carriers/health/117.png"
+                    class="formHolder-carrierImage w-100"
+                    alt="117 logo"
+                  />
+                </div>
+              </div>
+              <ul class="formHolder-list">
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 80 66"
+                    class="formHolder-listIcon"
+                  >
+                    <polygon
+                      points="0 39 13 26 26 39 66 0 80 14 26 66 0 39"
+                    ></polygon>
+                  </svg>
+                  Compare in Minutes
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 80 66"
+                    class="formHolder-listIcon"
+                  >
+                    <polygon
+                      points="0 39 13 26 26 39 66 0 80 14 26 66 0 39"
+                    ></polygon>
+                  </svg>
+                  Top Carriers &amp; Brokers
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 80 66"
+                    class="formHolder-listIcon"
+                  >
+                    <polygon
+                      points="0 39 13 26 26 39 66 0 80 14 26 66 0 39"
+                    ></polygon>
+                  </svg>
+                  100% Safe &amp; Secure
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-9 js-form-listing">
+              <div>
+                <div class="form-wrapper">
+                  <div class="mt-3">
+                    <div class="px-4 font-weight-bold">
+                      <div class="progress mt-3" style="height: 30px">
+                        <div
+                          class="progress-bar progress-bar-striped progress-bar-animated"
+                          style="font-weight: bold; font-size: 15px"
+                          role="progressbar"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="form-body px-5">
+                      <div class="card-body p-4 step">
+                        <div class="form-heading">
+                          Are you looking for individual or family coverage?
+                        </div>
+                        <div
+                          class="radio-group row justify-content-between px-3 text-center"
+                          style="justify-content: center !important"
+                        >
+                          <div
+                            class="col-auto me-sm-2 mx-1 card-block py-0 text-center radio"
+                          >
+                            <!-- <div class="opt-icon">
+                              <i
+                                class="fas fa-user-plus"
+                                style="font-size: 80px; margin-left: 25px"
+                              ></i>
+                            </div>
+                            <p><b>Add new user</b></p> -->
+                            <button class="btn-next">Individual</button>
+                          </div>
+                          <div
+                            id="suser"
+                            class="selected col-auto ms-sm-2 mx-1 card-block py-0 text-center radio"
+                          >
+                            <!-- <div class="opt-icon">
+                              <i
+                                class="fas fa-users"
+                                style="font-size: 80px"
+                              ></i>
+                            </div>
+                            <p><b>Search existing user</b></p> -->
+                            <button class="btn-next">Family</button>
+                          </div>
+                        </div>
+                        <!-- <div
+                          class="searchfield text-center pb-1"
+                          style="font-size: 12px"
+                        >
+                          Search for example <b>Gary Hendren</b>
+                        </div>
+                        <div class="searchfield input-group px-5">
+                          <span class="input-group-text" id="basic-addon1"
+                            ><i
+                              class="fas fa-search text-white"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <input
+                            id="txt-search"
+                            class="form-control"
+                            type="text"
+                            placeholder="Search"
+                            aria-label="Search"
+                          />
+                        </div> -->
+                        <div id="filter-records" class="mx-5"></div>
+                      </div>
+                      <div
+                        id="userinfo"
+                        class="card-body p-4 step"
+                        style="display: none"
+                      >
+                        <div class="text-center">
+                          <h5 class="card-title font-weight-bold pb-2">
+                            User information
+                          </h5>
+                        </div>
+
+                        <div class="form-group row">
+                          <div class="col-2"></div>
+                          <div class="col-8">
+                            <label for="household-name"
+                              >Household Size<b style="color: #dc3545"
+                                >*</b
+                              ></label
+                            >
+                            <input
+                              type="text"
+                              name="name"
+                              class="form-control"
+                              id="household-name"
+                              required
+                            />
+                            <!-- <div class="invalid-feedback">
+                              This field is required
+                            </div> -->
+                          </div>
+                        </div>
+                        <div class="text-center text-muted">
+                          <b style="color: #dc3545">*</b> required fields
+                        </div>
+                      </div>
+                      <div class="card-body p-5 step" style="display: none">
+                        Step 3
+                      </div>
+                      <div class="card-body p-5 step" style="display: none">
+                        Step 4
+                      </div>
+                      <div class="card-body p-5 step" style="display: none">
+                        Step 5
+                      </div>
+                      <div
+                        class="form-footer d-flex align-items-center justify-content-center mb-4"
+                      >
+                        <button
+                          class="action next btn btn-next btn-sm btn-outline-secondary float-end"
+                          disabled=""
+                        >
+                          Next
+                        </button>
+                        <button
+                          class="action submit btn form-btn btn-sm btn-outline-success float-end"
+                          style="display: none"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                      <button
+                        class="action back btn btn-sm btn-outline-warning"
+                        style="display: none"
+                      >
+                        Back
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- Footer cta section -->
-      <section
-        class="hero last text-center js-home hero-lander-v2 desktopOnly1"
-      >
-        <h2 class="hero-sub-headline">Start Now!</h2>
-        <h3 class="hero-sub-text">
-          To see your personalized list of health plan options now, enter your
-          zip code.
-        </h3>
-        <form
-          class="hero-form js-validate-form"
-          novalidate="novalidate"
-          tp-global-watched="true"
-        >
-          <input
-            type="tel"
-            class="hero-zip-input js-zip"
-            name="zip"
-            maxlength="5"
-            value="19801"
-            aria-label="zip code"
-          />
-          <button type="submit" class="hero-submit">
-            View Plans
-            <svg
-              class="hero-submit-arrow"
-              width="25"
-              height="24"
-              viewBox="0 0 25 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M8.79289 5.29289C9.18342 4.90237 9.81658 4.90237 10.2071 5.29289L16.9142 12L10.2071 18.7071C9.81658 19.0976 9.18342 19.0976 8.79289 18.7071C8.40237 18.3166 8.40237 17.6834 8.79289 17.2929L14.0858 12L8.79289 6.70711C8.40237 6.31658 8.40237 5.68342 8.79289 5.29289Z"
-                fill="#000"
-              ></path>
-            </svg>
-          </button>
-          <input
-            id="home-product"
-            name="product_placeholder"
-            type="hidden"
-            value="health"
-          />
-        </form>
-      </section>
     </main>
     <footer class="globalFooter">
       <div class="container no-padding">
@@ -744,13 +386,13 @@
                 <a
                   class="globalFooter-telephoneNumSmall"
                   href="tel:(844) 538-6414"
-                  >(844) 538-6414 <br
-                /></a>
+                  >(844) 538-6414</a
+                >
                 <span class="health-hours js-health-swap"
                   >Mon-Fri: 8am-10pm EST <br />Sat-Sun: 9am-5pm EST</span
                 >
               </p>
-              <p style="margin-top: 30px"></p>
+              <p style="margin-top: -30px"></p>
             </div>
             <div class="globalFooter-termsAndPrivacy">
               <p class="globalFooter-labelText">QuoteLab, LLC</p>
@@ -794,7 +436,7 @@
                     ></path>
                   </g>
                 </svg>
-                <p class="ms-2">Privacy Center</p>
+                <p>Privacy Center</p>
               </a>
               <a
                 href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
@@ -818,7 +460,7 @@
                     ></path>
                   </g>
                 </svg>
-                <p class="ms-2">
+                <p>
                   Your Privacy Choices
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -904,7 +546,7 @@
                     d="M8,0a8,8,0,1,0,8,8A8.024,8.024,0,0,0,8,0ZM5,11a.945.945,0,0,1-1-1A.945.945,0,0,1,5,9a.945.945,0,0,1,1,1A.945.945,0,0,1,5,11ZM7,6A.945.945,0,0,1,6,5,.945.945,0,0,1,7,4,.945.945,0,0,1,8,5,.945.945,0,0,1,7,6Zm4,4a.945.945,0,0,1-1-1,.945.945,0,0,1,1-1,.945.945,0,0,1,1,1A.945.945,0,0,1,11,10Z"
                   ></path>
                 </svg>
-                <p class="ms-2">Cookies and Other Technologies</p>
+                <p>Cookies and Other Technologies</p>
               </a>
               <a
                 href="//insurance.mediaalpha.com/content/terms-of-use.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
@@ -927,7 +569,7 @@
                     ></path>
                   </g>
                 </svg>
-                <p class="ms-2">Terms of Use</p>
+                <p>Terms of Use</p>
               </a>
             </div>
 
@@ -950,7 +592,7 @@
                     ></path>
                   </g>
                 </svg>
-                <p class="ms-2">Contact Us</p>
+                <p>Contact Us</p>
               </a>
               <a
                 href="//insurance.mediaalpha.com/content/privacy-policy.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
@@ -970,7 +612,7 @@
                   <path d="M12.8,4,12,0H4L3.2,4Z"></path>
                   <path d="M13,5H3L0,8H16Z"></path>
                 </svg>
-                <p class="ms-2">Privacy Policy</p>
+                <p>Privacy Policy</p>
               </a>
               <a
                 href="//insurance.mediaalpha.com/content/privacy-policy.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns#special-notice-california"
@@ -990,7 +632,7 @@
                     ></path>
                   </g>
                 </svg>
-                <p class="ms-2">California Privacy Choices</p>
+                <p>California Privacy Choices</p>
               </a>
             </div>
           </div>
@@ -1300,18 +942,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script>
-      document
-        .querySelector(".hero-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent the default form submission
-
-          // Redirect the current window to /result.html
-          window.location.href = "/result.html";
-
-          // Open a new tab with /quotes.html
-          window.open("/quotes.html", "_blank");
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./resources/form/js/bootstrap-multi-step-form.js"></script>
   </body>
 </html>
