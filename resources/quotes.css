@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 /* Result Section Start */
 .resultsHeader__cta {
   font-size: 18px;
@@ -62,7 +63,8 @@
   background-position: right 12px center;
   cursor: pointer;
 }
-.form-field:hover {
+.form-field:hover,
+.form-field:focus {
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
 }
@@ -221,4 +223,31 @@
   }
 }
 /* from Section End */
+
+/* CTA Phone banner End */
+.phoneBanner {
+  padding: 20px 0;
+  background: #1b75bc;
+  color: #fff;
+  font-size: 18px;
+}
+.phoneBanner-phone {
+  font-size: 28px;
+  font-weight: 700;
+}
+.phoneBanner-phone a,
+.phoneBanner-phone a:hover {
+  color: #ededed;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .phoneBanner {
+    font-size: 24px;
+  }
+  .phoneBanner-phone {
+    font-size: 32px;
+  }
+}
+/* CTA Phone banner Start */
+
 /* Quotes Section End */
