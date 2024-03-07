@@ -223,6 +223,8 @@ h1.hero-headline {
   border-radius: 5px 0 0 5px;
 }
 .hero-submit {
+  position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,6 +239,34 @@ h1.hero-headline {
 }
 .hero-submit:hover {
   background-color: #ffe458;
+}
+
+.hero-submit::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shine 2.5s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    left: -275%;
+  }
+  50% {
+    left: 25%;
+  }
+  100% {
+    left: 325%;
+  }
 }
 .logos {
   padding: 20px;
