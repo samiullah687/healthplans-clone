@@ -38,6 +38,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <link rel="stylesheet" href="./resources/form/css/demo.css" />
+    <link rel="stylesheet" href="./resources/quotes.css" />
   </head>
   <body>
     <div class="top-bar sticky-sm-top text-center">
@@ -47,16 +48,21 @@
       >
     </div>
 
-    <header class="globalHeader">
+    <header class="globalHeader sticky-sm-top">
       <div class="container">
         <div class="row align-items-center globalHeader-row">
           <div class="col-6 globalHeader-logoContainer">
             <a href="/"
               ><img
                 src="//cdn.healthplans.com/img/logo-color-2.svg"
-                class="globalHeader-logo"
+                class="globalHeader-logo desktopOnly1"
                 alt="HealthPlans.com"
                 width="250"
+                height="50" /><img
+                src="//cdn.healthplans.com/img/logo-color-2.svg"
+                class="globalHeader-logo mobileOnly"
+                alt="HealthPlans.com"
+                width="180"
                 height="50"
             /></a>
           </div>
@@ -68,18 +74,9 @@
                 <span class="globalHeader-phoneCta desktopOnly"
                   >Talk to an Agent!</span
                 >
-                <span class="globalHeader-phoneNumber"
-                  ><span class="js-medicare-swap-inline" style="display: none"
-                    >1&nbsp;</span
-                  >(844) 538-6414<span
-                    class="js-medicare-swap"
-                    style="display: none"
-                    >&nbsp;TTY users 711</span
-                  ></span
-                >
                 <svg
                   version="1.1"
-                  class="globalHeader-phoneIcon"
+                  class="globalHeader-phoneIcon me-2"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
                   x="0px"
@@ -98,6 +95,7 @@
                     ></path>
                   </g>
                 </svg>
+                <span class="globalHeader-phoneNumber">(844) 538-6414</span>
               </a>
               <div class="phoneWait mobileOnly">
                 <span class="js-wait-full-message"
@@ -230,21 +228,111 @@
             <div class="col-12 col-lg-9 js-form-listing">
               <div>
                 <div class="form-wrapper">
-                  <div class="mt-3">
-                    <div class="px-4 font-weight-bold">
-                      <div class="progress mt-3" style="height: 30px">
+                  <div class="">
+                    <div class="font-weight-bold">
+                      <div
+                        class="progress"
+                        style="height: 20px; border-radius: 10px"
+                      >
                         <div
-                          class="progress-bar progress-bar-striped progress-bar-animated"
-                          style="font-weight: bold; font-size: 15px"
+                          class="progress-bar"
+                          style="
+                            font-weight: bold;
+                            font-size: 15px;
+                            border-radius: 10px;
+                          "
                           role="progressbar"
                         ></div>
                       </div>
                     </div>
-                    <div class="form-body px-5">
-                      <div class="card-body p-4 step">
+                    <div class="form-body">
+                      <div class="card-body step">
                         <div class="form-heading">
                           Are you looking for individual or family coverage?
                         </div>
+                        <div
+                          class="radio-group row justify-content-between p-3 text-center"
+                          style="justify-content: center !important"
+                        >
+                          <div
+                            class="col-auto me-sm-2 mx-1 card-block py-0 text-center radio"
+                          >
+                            <button class="btn-next">Individual</button>
+                          </div>
+                          <div
+                            class="col-auto me-sm-2 mx-1 card-block py-0 text-center radio"
+                          >
+                            <button class="btn-next">Family</button>
+                          </div>
+                          <!-- <div
+                            id="suser"
+                            class="col-auto ms-sm-2 mx-1 card-block py-0 text-center radio"
+                          >
+                            <button class="btn-next">Family</button>
+                          </div> -->
+                        </div>
+                      </div>
+                      <div
+                        id="userinfo"
+                        class="card-body step"
+                        style="display: none"
+                      >
+                        <div class="form-group row">
+                          <div class="field-wrapper">
+                            <h3 class="step-heading my-3">
+                              What's your household size?
+                            </h3>
+                            <div class="dob-field-wrapper">
+                              <label
+                                for="household-size"
+                                class="form-field-label"
+                                >Household Size</label
+                              >
+
+                              <select
+                                name="household-size"
+                                id="household-size"
+                                class="form-field"
+                              >
+                                <option value="">Please Select</option>
+                                <option value="1">1</option>
+                                <option selected value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7+">7+</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body step" style="display: none">
+                        <h3 class="step-heading my-3">
+                          What is your expected 2024 annual household income?
+                        </h3>
+                        <div class="form-field-wrapper">
+                          <label for="household-income" class="form-field-label"
+                            >Household Income</label
+                          >
+
+                          <select
+                            name="household-income"
+                            id="household-income"
+                            class="form-field"
+                          >
+                            <option value="">Please Select</option>
+                            <option value="1">Below $16,000</option>
+                            <option value="2">$17,000 - $29,999</option>
+                            <option selected value="3">$30,000 - 49,999</option>
+                            <option value="4">$50,000 - 79,999</option>
+                            <option value="5">$75,000 - 99,999</option>
+                            <option value="5">Over $100,000</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="card-body p-4 step" style="display: none">
+                        <div class="form-heading">What is your gender?</div>
                         <div
                           class="radio-group row justify-content-between px-3 text-center"
                           style="justify-content: center !important"
@@ -252,116 +340,273 @@
                           <div
                             class="col-auto me-sm-2 mx-1 card-block py-0 text-center radio"
                           >
-                            <!-- <div class="opt-icon">
-                              <i
-                                class="fas fa-user-plus"
-                                style="font-size: 80px; margin-left: 25px"
-                              ></i>
-                            </div>
-                            <p><b>Add new user</b></p> -->
-                            <button class="btn-next">Individual</button>
+                            <button class="btn-next">Male</button>
                           </div>
                           <div
                             id="suser"
                             class="selected col-auto ms-sm-2 mx-1 card-block py-0 text-center radio"
                           >
-                            <!-- <div class="opt-icon">
-                              <i
-                                class="fas fa-users"
-                                style="font-size: 80px"
-                              ></i>
-                            </div>
-                            <p><b>Search existing user</b></p> -->
-                            <button class="btn-next">Family</button>
+                            <button class="btn-next">Female</button>
                           </div>
                         </div>
-                        <!-- <div
-                          class="searchfield text-center pb-1"
-                          style="font-size: 12px"
+                      </div>
+                      <div class="card-body step" style="display: none">
+                        <h3 class="step-heading my-3">
+                          Do you have any of the following health conditions?
+                        </h3>
+                        <div class="form-field-wrapper w-100">
+                          <div class="col-6">
+                            <ul class="disease-list">
+                              <li>Cancer</li>
+                              <li>Heart Attack</li>
+                              <li>Stroke</li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="disease-list">
+                              <li>Diabetes</li>
+                              <li>AIDS/HIV</li>
+                              <li class="text-nowrap">Pulmonary Disease</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div
+                          class="radio-group row justify-content-between p-3 text-center"
+                          style="justify-content: center !important"
                         >
-                          Search for example <b>Gary Hendren</b>
-                        </div>
-                        <div class="searchfield input-group px-5">
-                          <span class="input-group-text" id="basic-addon1"
-                            ><i
-                              class="fas fa-search text-white"
-                              aria-hidden="true"
-                            ></i
-                          ></span>
-                          <input
-                            id="txt-search"
-                            class="form-control"
-                            type="text"
-                            placeholder="Search"
-                            aria-label="Search"
-                          />
-                        </div> -->
-                        <div id="filter-records" class="mx-5"></div>
-                      </div>
-                      <div
-                        id="userinfo"
-                        class="card-body p-4 step"
-                        style="display: none"
-                      >
-                        <div class="text-center">
-                          <h5 class="card-title font-weight-bold pb-2">
-                            User information
-                          </h5>
-                        </div>
-
-                        <div class="form-group row">
-                          <div class="col-2"></div>
-                          <div class="col-8">
-                            <label for="household-name"
-                              >Household Size<b style="color: #dc3545"
-                                >*</b
-                              ></label
-                            >
-                            <input
-                              type="text"
-                              name="name"
-                              class="form-control"
-                              id="household-name"
-                              required
-                            />
-                            <!-- <div class="invalid-feedback">
-                              This field is required
-                            </div> -->
+                          <div
+                            class="col-auto me-sm-2 mx-1 card-block py-0 text-center radio"
+                          >
+                            <button class="btn-next">Yes</button>
+                          </div>
+                          <div
+                            class="col-auto me-sm-2 mx-1 card-block py-0 text-center radio"
+                          >
+                            <button class="btn-next">No</button>
                           </div>
                         </div>
-                        <div class="text-center text-muted">
-                          <b style="color: #dc3545">*</b> required fields
+                      </div>
+                      <div class="card-body step" style="display: none">
+                        <h3 class="step-heading my-3">
+                          What is your birthdate?
+                        </h3>
+                        <div class="form-field-wrapper">
+                          <div
+                            class="dob-field-wrapper justify-content-between"
+                          >
+                            <div
+                              style="width: 70px"
+                              class="hydgpsadcklnfslrbwdjkbka-1x5x8ew e1e9d1eg20"
+                            >
+                              <div class="d-flex flex-column position-relative">
+                                <label class="form-field-label">Month</label>
+                                <div class="position-relative">
+                                  <input
+                                    style="
+                                      width: 70px;
+                                      padding: 16px;
+                                      background-image: none;
+                                    "
+                                    placeholder="MM"
+                                    type="tel"
+                                    minlength="2"
+                                    maxlength="2"
+                                    class="form-field"
+                                    value=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              style="width: 70px"
+                              class="hydgpsadcklnfslrbwdjkbka-9m41v7 e1e9d1eg20"
+                            >
+                              <div class="d-flex flex-column position-relative">
+                                <label class="form-field-label">Day</label>
+                                <div class="position-relative">
+                                  <input
+                                    style="
+                                      width: 70px;
+                                      padding: 16px;
+                                      background-image: none;
+                                    "
+                                    placeholder="DD"
+                                    type="tel"
+                                    minlength="2"
+                                    maxlength="2"
+                                    class="form-field"
+                                    value=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              style="width: 100px"
+                              class="hydgpsadcklnfslrbwdjkbka-ru2a4w e1e9d1eg20"
+                            >
+                              <div class="d-flex flex-column position-relative">
+                                <label class="form-field-label">Year</label>
+                                <div class="position-relative">
+                                  <input
+                                    style="
+                                      width: 100px;
+                                      padding: 16px;
+                                      background-image: none;
+                                    "
+                                    placeholder="YYYY"
+                                    type="tel"
+                                    minlength="4"
+                                    maxlength="4"
+                                    class="form-field"
+                                    value=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="card-body p-5 step" style="display: none">
-                        Step 3
+
+                      <div class="card-body step" style="display: none">
+                        <h3 class="step-heading my-3">
+                          What is your home address?
+                        </h3>
+                        <div class="form-field-wrapper">
+                          <label class="form-field-label">Street Address</label>
+                          <div class="position-relative">
+                            <input
+                              placeholder="Street address"
+                              type="text"
+                              class="form-field"
+                              value=""
+                              style="background-image: none"
+                            />
+                          </div>
+                        </div>
                       </div>
-                      <div class="card-body p-5 step" style="display: none">
-                        Step 4
+                      <div class="card-body step" style="display: none">
+                        <h3 class="step-heading my-3">
+                          What is your full name?
+                        </h3>
+                        <div class="form-field-wrapper">
+                          <label class="form-field-label">Full Name</label>
+                          <div class="position-relative">
+                            <input
+                              placeholder="Full and last name"
+                              type="text"
+                              class="form-field"
+                              value=""
+                              style="background-image: none"
+                            />
+                          </div>
+                        </div>
                       </div>
-                      <div class="card-body p-5 step" style="display: none">
-                        Step 5
+                      <div class="card-body p-0 step" style="display: none">
+                        <h3 class="step-heading my-3">
+                          Thanks sss, your quote is ready!
+                        </h3>
+                        <h3 class="step-heading my-3">
+                          Where do we send it to?
+                        </h3>
+                        <div class="row form-field-wrapper desktop-view w-100">
+                          <div class="col-md-6 col-sm-12 d-flex flex-column">
+                            <label class="form-field-label">Email</label>
+                            <input
+                              placeholder="Email address"
+                              type="text"
+                              class="form-field w-100"
+                              value=""
+                              style="background-image: none"
+                            />
+                          </div>
+                          <div class="col-md-6 col-sm-12 d-flex flex-column">
+                            <label class="form-field-label">Phone</label>
+                            <input
+                              placeholder="Phone number"
+                              type="tel"
+                              class="form-field w-100"
+                              value=""
+                              style="background-image: none"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="final-text mt-3" style="display: block">
+                            <input type="hidden" id="leadid_tcpa_disclosure" />
+
+                            By entering and submitting a phone number, email and
+                            other information using this form, you represent
+                            that you are at least 18 years old, you authorize us
+                            to share the information you provided, including any
+                            health related information, with our marketing
+                            partners so they may process and respond to your
+                            request, you agree to our
+                            <a
+                              href="//insurance.mediaalpha.com/content/terms-of-use.html?;Lx_BkMIr8k7wc8vDXeD_aAzp5uIAqUaDxhwS_K-WNWPCW_9wxnUmAYqGqMF-eZV-RL8qR1B8"
+                              target="_blank"
+                              >Terms of Use</a
+                            >, and you expressly consent to your information
+                            being used and disclosed as described in our
+                            <a
+                              href="//insurance.mediaalpha.com/content/privacy-policy.html?;Lx_BkMIr8k7wc8vDXeD_aAzp5uIAqUaDxhwS_K-WNWPCW_9wxnUmAYqGqMF-eZV-RL8qR1B8"
+                              target="_blank"
+                              >Privacy Policy</a
+                            >. You also authorize Quotelab, LLC, and one or more
+                            of Kaiser Permanente and our
+                            <a
+                              href="//insurance.mediaalpha.com/content/marketing-partners.html?;GYssvl4jLtmESUvYdOgf7hqrdw18fkNopdBsDJ8OWalYZjHO2UPiohEdJK_4tQGBpmIUXgZSWSrH7fZEsPjhikKBJ2HB_w"
+                              target="_blank"
+                              >network of advertisers</a
+                            >
+                            to contact you for marketing/telemarketing purposes
+                            at the number, email, and address you provided
+                            above, including your wireless number if provided,
+                            using live operators, automated telephone dialing
+                            systems, pre-recorded messages, artificial voice
+                            and/or emails, even if the number you provide is on
+                            a state or Federal Do Not Call registry. Message and
+                            Data rates may apply. You are not required to
+                            consent as a condition of purchasing goods or
+                            services and may revoke consent at any time.
+                          </div>
+                        </div>
                       </div>
                       <div
                         class="form-footer d-flex align-items-center justify-content-center mb-4"
                       >
                         <button
-                          class="action next btn btn-next btn-sm btn-outline-secondary float-end"
+                          class="action next btn btn-next btn-sm"
                           disabled=""
                         >
                           Next
                         </button>
                         <button
-                          class="action submit btn form-btn btn-sm btn-outline-success float-end"
+                          class="action submit btn form-btn btn-sm"
                           style="display: none"
                         >
                           Submit
                         </button>
                       </div>
                       <button
-                        class="action back btn btn-sm btn-outline-warning"
+                        class="action back btn btn-sm"
                         style="display: none"
                       >
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fas"
+                          data-icon="angle-left"
+                          class="svg-inline--fa fa-angle-left me-1"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 256 512"
+                          style="height: 1.2rem"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+                          ></path>
+                        </svg>
                         Back
                       </button>
                     </div>
@@ -386,13 +631,13 @@
                 <a
                   class="globalFooter-telephoneNumSmall"
                   href="tel:(844) 538-6414"
-                  >(844) 538-6414</a
-                >
+                  >(844) 538-6414 <br
+                /></a>
                 <span class="health-hours js-health-swap"
                   >Mon-Fri: 8am-10pm EST <br />Sat-Sun: 9am-5pm EST</span
                 >
               </p>
-              <p style="margin-top: -30px"></p>
+              <p style="margin-top: 30px"></p>
             </div>
             <div class="globalFooter-termsAndPrivacy">
               <p class="globalFooter-labelText">QuoteLab, LLC</p>
@@ -436,7 +681,7 @@
                     ></path>
                   </g>
                 </svg>
-                <p>Privacy Center</p>
+                <p class="ms-2">Privacy Center</p>
               </a>
               <a
                 href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
@@ -460,7 +705,7 @@
                     ></path>
                   </g>
                 </svg>
-                <p>
+                <p class="ms-2">
                   Your Privacy Choices
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -546,7 +791,7 @@
                     d="M8,0a8,8,0,1,0,8,8A8.024,8.024,0,0,0,8,0ZM5,11a.945.945,0,0,1-1-1A.945.945,0,0,1,5,9a.945.945,0,0,1,1,1A.945.945,0,0,1,5,11ZM7,6A.945.945,0,0,1,6,5,.945.945,0,0,1,7,4,.945.945,0,0,1,8,5,.945.945,0,0,1,7,6Zm4,4a.945.945,0,0,1-1-1,.945.945,0,0,1,1-1,.945.945,0,0,1,1,1A.945.945,0,0,1,11,10Z"
                   ></path>
                 </svg>
-                <p>Cookies and Other Technologies</p>
+                <p class="ms-2">Cookies and Other Technologies</p>
               </a>
               <a
                 href="//insurance.mediaalpha.com/content/terms-of-use.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
@@ -569,7 +814,7 @@
                     ></path>
                   </g>
                 </svg>
-                <p>Terms of Use</p>
+                <p class="ms-2">Terms of Use</p>
               </a>
             </div>
 
@@ -592,7 +837,7 @@
                     ></path>
                   </g>
                 </svg>
-                <p>Contact Us</p>
+                <p class="ms-2">Contact Us</p>
               </a>
               <a
                 href="//insurance.mediaalpha.com/content/privacy-policy.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
@@ -612,7 +857,7 @@
                   <path d="M12.8,4,12,0H4L3.2,4Z"></path>
                   <path d="M13,5H3L0,8H16Z"></path>
                 </svg>
-                <p>Privacy Policy</p>
+                <p class="ms-2">Privacy Policy</p>
               </a>
               <a
                 href="//insurance.mediaalpha.com/content/privacy-policy.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns#special-notice-california"
@@ -632,7 +877,7 @@
                     ></path>
                   </g>
                 </svg>
-                <p>California Privacy Choices</p>
+                <p class="ms-2">California Privacy Choices</p>
               </a>
             </div>
           </div>

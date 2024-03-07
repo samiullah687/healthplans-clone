@@ -114,11 +114,16 @@ $(document).on("click", ".li-search", function () {
 });
 
 $(".radio-group .radio").on("click", function () {
-  $(".selected .fa").removeClass("fa-check");
-  $(".radio").removeClass("selected");
+  $(".radio")
+    .removeClass("selected selected-option")
+    .find("button")
+    .css("border", "");
   $(this).addClass("selected");
+  $(this)
+    // .addClass("selected-option")
+    .find("button")
+    .css("border", "2px solid black");
   if ($("#suser").hasClass("selected") == true) {
-    $(".next").prop("disabled", true);
     $(".searchfield").show();
   } else {
     setFormFields(false);
@@ -127,6 +132,7 @@ $(".radio-group .radio").on("click", function () {
     $(".searchfield").hide();
   }
 });
+
 var step = 1;
 $(document).ready(function () {
   stepProgress(step);
@@ -162,7 +168,7 @@ $(".back").on("click", function () {
 
 // CALCULATE PROGRESS BAR
 stepProgress = function (currstep) {
-  var percent = parseFloat(100 / $(".step").length) * currstep;
+  var percent = parseFloat(100 / $(".step").length) * currstep - 1;
   percent = percent.toFixed();
   $(".progress-bar")
     .css("width", percent + "%")
