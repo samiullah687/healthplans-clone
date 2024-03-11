@@ -580,45 +580,6 @@
 
         <div class="separation-line"></div>
         <section id="footerDisclaimer" class="footerDisclaimer">
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const defaultMedicarePlan =
-                'TPMO Disclaimer: We do not offer every plan available in your area.  Currently we represent [73] organizations which offer [5110] products in your area. Please contact <a href="https://www.medicare.gov/" target="_blank" rel=”nofollow”>Medicare.gov</a> or 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options.<br>Please note that these numbers provided are not specific to your area but rather represent the number of organizations and the number of products available on a national basis. We will connect you with licensed insurance agents who can provide information about the number of organizations they represent and the number of products they offer in your service area.';
-
-              $("body").on("get-medicare-disclaimer", function (event, zip) {
-                if (zip) {
-                  $.getJSON(
-                    "//insurance.mediaalpha.com/medicare-plans.json" +
-                      "?zip=" +
-                      zip +
-                      "&placement_id=" +
-                      "UhjXj9Xn-j2WV29jKxM3B5ntfrnQnQ" +
-                      "&api_token=" +
-                      "ABIROAAAAAAAAAEGV6O7QQ2TKU" +
-                      "&plan_type=local ppo&plan_type=hmo&plan_type=msa&plan_type=Regional PPO&plan_type=PFFS",
-                    function (data) {
-                      if (data && data.num_plans) {
-                        const medicarePlan =
-                          "TPMO Disclaimer: We do not offer every plan available in your area.  Currently we represent [" +
-                          data.num_organizations +
-                          "] organizations which offer [" +
-                          data.num_plans +
-                          '] products in your area. Please contact <a href="https://www.medicare.gov/" target="_blank" rel=”nofollow”>Medicare.gov</a> or 1-800-MEDICARE , or your local State Health Insurance Program (SHIP) to get information on all of your options.';
-                        $(".js-medicare-plan").html(medicarePlan);
-                      } else {
-                        $(".js-medicare-plan").html(defaultMedicarePlan);
-                      }
-                    }
-                  );
-                } else {
-                  $(".js-medicare-plan").html(defaultMedicarePlan);
-                }
-              });
-
-              let currentZip = oo.getParam("zip") ? oo.getParam("zip") : null;
-              $("body").trigger("get-medicare-disclaimer", [currentZip]);
-            });
-          </script>
           <style>
             .footerDisclaimer-arrow {
               transform: rotate(90deg);
