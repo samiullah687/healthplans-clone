@@ -377,7 +377,9 @@
                               class="hydgpsadcklnfslrbwdjkbka-1x5x8ew e1e9d1eg20"
                             >
                               <div class="d-flex flex-column position-relative">
-                                <label class="form-field-label">Month</label>
+                                <label for="month" class="form-field-label"
+                                  >Month</label
+                                >
                                 <div class="position-relative">
                                   <input
                                     style="
@@ -391,6 +393,7 @@
                                     maxlength="2"
                                     class="form-field"
                                     value=""
+                                    id="month"
                                   />
                                 </div>
                               </div>
@@ -400,16 +403,19 @@
                               class="hydgpsadcklnfslrbwdjkbka-9m41v7 e1e9d1eg20"
                             >
                               <div class="d-flex flex-column position-relative">
-                                <label class="form-field-label">Day</label>
+                                <label for="day" class="form-field-label"
+                                  >Day</label
+                                >
                                 <div class="position-relative">
                                   <input
+                                    id="day"
                                     style="
                                       width: 70px;
                                       padding: 16px;
                                       background-image: none;
                                     "
                                     placeholder="DD"
-                                    type="tel"
+                                    type="number"
                                     minlength="2"
                                     maxlength="2"
                                     class="form-field"
@@ -423,9 +429,12 @@
                               class="hydgpsadcklnfslrbwdjkbka-ru2a4w e1e9d1eg20"
                             >
                               <div class="d-flex flex-column position-relative">
-                                <label class="form-field-label">Year</label>
+                                <label for="year" class="form-field-label"
+                                  >Year</label
+                                >
                                 <div class="position-relative">
                                   <input
+                                    id="year"
                                     style="
                                       width: 100px;
                                       padding: 16px;
@@ -450,9 +459,12 @@
                           What is your home address?
                         </h3>
                         <div class="form-field-wrapper">
-                          <label class="form-field-label">Street Address</label>
+                          <label for="street-address" class="form-field-label"
+                            >Street Address</label
+                          >
                           <div class="position-relative">
                             <input
+                              id="street-address"
                               placeholder="Street address"
                               type="text"
                               class="form-field"
@@ -467,9 +479,12 @@
                           What is your full name?
                         </h3>
                         <div class="form-field-wrapper">
-                          <label class="form-field-label">Full Name</label>
+                          <label for="full-name" class="form-field-label"
+                            >Full Name</label
+                          >
                           <div class="position-relative">
                             <input
+                              id="full-name"
                               placeholder="Full and last name"
                               type="text"
                               class="form-field"
@@ -488,8 +503,11 @@
                         </h3>
                         <div class="row form-field-wrapper desktop-view w-100">
                           <div class="col-md-6 col-sm-12 d-flex flex-column">
-                            <label class="form-field-label">Email</label>
+                            <label for="email" class="form-field-label"
+                              >Email</label
+                            >
                             <input
+                              id="email"
                               placeholder="Email address"
                               type="text"
                               class="form-field w-100"
@@ -498,8 +516,11 @@
                             />
                           </div>
                           <div class="col-md-6 col-sm-12 d-flex flex-column">
-                            <label class="form-field-label">Phone</label>
+                            <label for="phone" class="form-field-label"
+                              >Phone</label
+                            >
                             <input
+                              id="phone"
                               placeholder="Phone number"
                               type="tel"
                               class="form-field w-100"
@@ -510,8 +531,6 @@
                         </div>
                         <div class="col-12">
                           <div class="final-text mt-3" style="display: block">
-                            <input type="hidden" id="leadid_tcpa_disclosure" />
-
                             By entering and submitting a phone number, email and
                             other information using this form, you represent
                             that you are at least 18 years old, you authorize us

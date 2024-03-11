@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 /* Result Section Start */
-.resultsHeader__cta {
+.resultsHeader-cta {
   font-size: 18px;
   text-align: center;
   font-weight: 700;
@@ -14,7 +14,7 @@
     color: #fff;
     background: #3498db;
   }
-  .resultsHeader__cta {
+  .resultsHeader-cta {
     font-size: 28px;
   }
 }
