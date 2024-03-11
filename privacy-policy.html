@@ -1,0 +1,3261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Project</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./resources/styles.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <link rel="stylesheet" href="./resources/form/css/demo.css" />
+    <link rel="stylesheet" href="./resources/quotes.css" />
+  </head>
+  <body>
+    <div class="top-bar sticky-sm-top text-center">
+      <span
+        ><a href="#">HealthPlans.com</a> is not a government website and is
+        privately owned.</span
+      >
+    </div>
+
+    <header class="globalHeader sticky-sm-top">
+      <div class="container">
+        <div class="row align-items-center globalHeader-row">
+          <div class="col-6 globalHeader-logoContainer">
+            <a href="/"
+              ><img
+                src="//cdn.healthplans.com/img/logo-color-2.svg"
+                class="globalHeader-logo desktopOnly1"
+                alt="HealthPlans.com"
+                width="250"
+                height="50" /><img
+                src="//cdn.healthplans.com/img/logo-color-2.svg"
+                class="globalHeader-logo mobileOnly"
+                alt="HealthPlans.com"
+                width="180"
+                height="50"
+            /></a>
+          </div>
+          <div
+            class="col-6 d-flex justify-content-end globalHeader-phoneContainer"
+          >
+            <div>
+              <a href="tel:(844) 538-6414" class="globalHeader-phoneButton">
+                <span class="globalHeader-phoneCta desktopOnly"
+                  >Talk to an Agent!</span
+                >
+                <svg
+                  version="1.1"
+                  class="globalHeader-phoneIcon me-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 177.6 178.1"
+                  style="enable-background: new 0 0 177.6 178.1"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      d="M60.9,37.1c3.5,6,3.3,8.4-1.7,13.2c-4.1,4-8.9,7.5-13.1,11.4c-6,5.6-7,8.5-3.1,15.7c3.6,6.8,7.8,13.6,13,19.2
+                                      c13.6,15,29.3,27.8,46.5,38.7c6.8,4.3,9.7,3.7,14.9-2.5c3.3-3.9,6.4-8.1,9.7-12c5-5.9,8-6.4,14.6-2.5c9.7,5.7,19.5,11.4,29.1,17.1
+                                      c7.3,4.3,8.1,6.6,5,14.6c-6.5,17.1-25.3,29-44.1,28c-16.7-0.8-31.6-7.2-45.6-15.7C56.7,144.4,31.7,121.8,15,91.2
+                                      C8.2,78.7,3.7,65.4,0.9,51.5c-3.7-19,4.2-32.9,18.9-43.7c4.5-3.3,3.1-2.3,8.8-6.4c3.6-2.6,9.6-1.5,12.5,3.2
+                                      C60.9,37.1,60.9,37.1,60.9,37.1z"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="globalHeader-phoneNumber">(844) 538-6414</span>
+              </a>
+              <div class="phoneWait mobileOnly">
+                <span class="js-wait-full-message"
+                  >Estimated wait time:
+                  <span class="phoneWait-time"
+                    ><span class="js-wait-message"
+                      ><span class="js-wait-time">1</span> min</span
+                    ></span
+                  ></span
+                >
+              </div>
+              <script type="text/javascript">
+                var waitDate = new Date();
+                var waitHour = waitDate.getHours();
+                if (waitHour >= 0 && waitHour < 6) {
+                  document.querySelector(".js-wait-time").textContent = "0";
+                } else if (waitHour >= 9 && waitHour < 14) {
+                  document.querySelector(".js-wait-time").textContent = "2";
+                }
+              </script>
+              <span
+                class="globalHeader-phoneInfo js-medicare-swap"
+                style="display: none"
+                ><strong>Hours:</strong> 8am - 8pm,<br class="d-md-none" />
+                7 days a week</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <style>
+          #mav-privacy p {
+            margin-top: 15px;
+          }
+
+          #mav-privacy h2,
+          #mav-privacy .anchor-header {
+            padding-top: 50px;
+            margin-top: -50px;
+          }
+
+          #mav-privacy .mp-toggle {
+            cursor: pointer;
+          }
+          #mav-privacy .underline {
+            text-decoration: underline;
+          }
+          #mav-privacy .hidden {
+            display: none !important;
+          }
+
+          #mav-privacy ul,
+          #mav-privacy ol {
+            margin-top: 1em;
+            padding-left: 20px;
+          }
+
+          #mav-privacy ul li {
+            margin-bottom: 1em;
+          }
+
+          #mav-privacy th {
+            font-weight: bold;
+          }
+
+          #mav-privacy table,
+          #mav-privacy th,
+          #mav-privacy td {
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+            padding: 5px;
+            vertical-align: top;
+          }
+
+          #mav-privacy .mav-arrow-right {
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-left: 9px solid #333;
+            border-bottom: 6px solid transparent;
+            display: inline-block;
+          }
+
+          /* sticky table of contents */
+          #mav-privacy .privacyMenu.sticky-menu {
+            background: #fff;
+            position: fixed;
+            top: 0;
+            border: 1px solid #ccc;
+            z-index: 10;
+          }
+
+          #mav-privacy .privacyMenu__header {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 5px 8px;
+            justify-content: space-between;
+          }
+
+          #mav-privacy .privacyMenu__arrow {
+            transform: rotate(90deg);
+            transition: transform 0.5s;
+            display: none;
+          }
+
+          #mav-privacy .privacyMenu.sticky-menu .privacyMenu__arrow {
+            display: block;
+          }
+
+          #mav-privacy .privacyMenu.collapse-menu .privacyMenu__arrow {
+            transform: rotate(-90deg);
+          }
+
+          #mav-privacy .privacyMenu.collapse-menu .privacyMenu__content {
+            display: none;
+          }
+
+          #mav-privacy .privacyMenu__content ul {
+            margin: 5px 8px;
+          }
+
+          #mav-privacy .privacyMenu__content ul li {
+            margin-bottom: 5px;
+          }
+        </style>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const COLLAPSE = "collapse-menu";
+            const STICKY = "sticky-menu";
+            const privacyMenuHolder = document.querySelector(
+              ".js-privacy-menu-holder"
+            );
+            const privacyMenu = document.querySelector(".js-privacy-menu");
+            const privacyHeader = document.querySelector(".js-privacy-header");
+            const privacyLink = document.querySelectorAll(
+              ".js-privacy-content a"
+            );
+            const rect = privacyMenu.getBoundingClientRect();
+            let privacySticky = 0;
+            let privacyTrigger =
+              rect.top +
+              document.body.scrollTop +
+              privacyMenu.offsetHeight +
+              window.scrollY;
+
+            // toggle hide/show menu
+            privacyHeader.addEventListener("click", () => {
+              privacyMenu.classList.toggle(COLLAPSE);
+            });
+
+            // hide menu when clicking on sticky link
+            for (let i = 0; i < privacyLink.length; i++) {
+              privacyLink[i].addEventListener("click", () => {
+                privacyMenu.classList.add(COLLAPSE);
+              });
+            }
+
+            function setupMenu() {
+              setTimeout(function () {
+                window.addEventListener("scroll", function () {
+                  if (window.scrollY > privacyTrigger && privacySticky == 0) {
+                    privacyMenu.style.width = privacyMenu.offsetWidth + "px";
+                    privacyMenu.classList.add(STICKY);
+                    privacyMenu.classList.add(COLLAPSE);
+                    privacySticky = 1;
+                  } else if (window.scrollY < privacyTrigger) {
+                    privacyMenu.classList.remove(STICKY);
+                    privacyMenu.classList.remove(COLLAPSE);
+                    privacyMenu.style.width = "auto";
+                    privacySticky = 0;
+                  }
+                });
+
+                privacyMenuHolder.style.height =
+                  privacyMenu.offsetHeight + "px";
+              }, 300);
+            }
+
+            setupMenu();
+          });
+        </script>
+
+        <div id="mav-privacy">
+          <h1>Privacy Policy</h1>
+          <div
+            class="privacyMenuHolder js-privacy-menu-holder"
+            style="height: 469px"
+          >
+            <div class="privacyMenu js-privacy-menu" style="width: auto">
+              <div class="privacyMenu__header js-privacy-header">
+                Table of Contents &nbsp;
+                <svg
+                  version="1.1"
+                  class="privacyMenu__arrow"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 330 512"
+                  style="enable-background: new 0 0 330 512"
+                  xml:space="preserve"
+                  width="12"
+                  height="12"
+                >
+                  <g>
+                    <polygon
+                      points="0,72 72,0 330,256 74,512 0,438 186,256"
+                    ></polygon>
+                  </g>
+                </svg>
+              </div>
+              <div class="privacyMenu__content js-privacy-content">
+                <ul>
+                  <li>
+                    <a href="#who-we-are"
+                      >Who we are and about this Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#policy-cover">What does this Policy cover?</a>
+                  </li>
+                  <li>
+                    <a href="#policy-not-cover"
+                      >What does this Policy not cover?</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#learn-more-privacy-center"
+                      >Learn more in our Privacy Center about managing your
+                      privacy.</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#what-info-and-source"
+                      >What information do we collect and from what sources?</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#dont-provide-information"
+                      >What if you don't provide us with certain information
+                      MediaAlpha is asking for in our marketplaces?</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#how-we-use-your-information"
+                      >How and for what business purposes do we use the
+                      information we collect?</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#sharing-information-info"
+                      >When, how, and with whom do we share the information we
+                      collect?</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#how-third-party"
+                      >How do third-party content, links, and integrations in
+                      our marketplaces work?</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#how-long-do-we-keep-the-info"
+                      >How long do we keep the information we collect?</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#cookies-and-technologies"
+                      >Cookies and other Technologies</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#special-notice-california">Your Privacy Rights</a>
+                  </li>
+                  <li>
+                    <a href="#choices-and-control">Your Choices and Controls</a>
+                  </li>
+                  <li>
+                    <a href="#revisions-privacy-policy"
+                      >Revisions to the Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#questions-and-suggestions"
+                      >Questions and Suggestions</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <p>Effective: January 1, 2023</p>
+          <h2 id="who-we-are">Who we are and about this Privacy Policy</h2>
+
+          <p>
+            We are QuoteLab, LLC, and we do business as MediaAlpha. We provide
+            marketplaces connecting consumers like you with businesses that
+            provide or are able to connect you with other businesses that
+            provide insurance, finance, travel, and other products and services
+            that may be of interest to you, or that you may wish to purchase or
+            request a quote or rates for. We refer to these businesses as
+            advertisers or our network of advertisers. You may access our
+            marketplaces through the websites we own and operate, our web forms
+            that are embedded in our websites and those embedded in certain
+            third-party websites that we partner with, by calling us, or by
+            asking us to call, email, or text you.
+          </p>
+
+          <p>
+            We do not provide rates, quotes, travel, insurance, or finance
+            products or services. The rates and quotes we show you are from
+            advertisers participating in our marketplaces.
+          </p>
+
+          <p>
+            We do not act as an agent for any advertiser participating in our
+            marketplaces nor do we sell the products or services of such
+            advertisers.
+          </p>
+
+          <p>
+            We wrote this Privacy Policy because we want you to understand what
+            information we collect, and how we use and share it. That's why we
+            encourage you to read this Policy, as it is designed to help you use
+            our marketplaces in the way that's right for you.
+          </p>
+
+          <p>
+            In this Policy, we explain how we collect, use, share, retain, and
+            transfer information. We also provide information about your rights
+            and how to exercise them with us. Each section of this Policy is
+            designed to include helpful examples (where appropriate) with
+            simpler language to make our practices easier to understand. There
+            are also links to resources where you may learn more about the
+            privacy topics that interest you. Of course, if you have questions,
+            feel free to
+            <a
+              href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns#contact-us"
+              >Contact Us</a
+            >.
+          </p>
+
+          <p>Read the full Privacy Policy below.</p>
+
+          <h2 id="policy-cover">What does this Policy cover?</h2>
+
+          <p>
+            This Policy describes the services we offer, how our marketplaces
+            work, the information that we collect and process about you to
+            provide our services, how we handle the information we collect about
+            you, and your rights and how to exercise them with us.
+          </p>
+
+          <p>We provide our services through our marketplaces which include:</p>
+
+          <p>
+            This Privacy Policy applies only to the following basic categories
+            of information we collect:
+          </p>
+
+          <ul>
+            <li>Our owned and operated websites;</li>
+            <li>Our web forms that are embedded in our websites;</li>
+            <li>
+              Our web forms that are embedded in certain third-party websites
+              that we partner with;
+            </li>
+            <li>
+              The telephone numbers we provide on our websites and web forms
+              (this is when you call us using the telephone numbers we provide);
+              and
+            </li>
+            <li>
+              The features and functionality we provide on our websites and web
+              forms that allow you to request that we call, email, or text you
+              (this is when we provide our services to you via phone, email, or
+              text messaging because you requested we contact you in that
+              manner).
+            </li>
+          </ul>
+
+          <p>
+            Our marketplaces are designed to connect you with advertisers (which
+            we also call our network of advertisers or marketing partners and
+            which may include businesses, agents, carriers, lead aggregators,
+            and other types of advertisers in our network) who provide or are
+            able to connect you with other businesses who provide:
+          </p>
+
+          <ul>
+            <li>Insurance products and services;</li>
+            <li>Financial products and services;</li>
+            <li>Travel related products and services; and</li>
+            <li>
+              Other products and services that may be of interest to you or that
+              you may wish to consider purchasing.
+            </li>
+          </ul>
+
+          <p>You may use our marketplaces in different ways including by:</p>
+
+          <ul>
+            <li>
+              Connecting with participating advertisers by clicking on the
+              advertisements displayed on our websites. The advertisements we
+              display to you may be presented in various forms including as
+              online ads, text, video, or other interactive content, products
+              and services information, rates, quotes, links, etc. (<a
+                data-tcpa-modal="//dhe4oz50378wj.cloudfront.net/img/privacy-policy/insurer-ads-1.png"
+                href="javascript:void(0);"
+                >Carrier's Advertisement</a
+              >). By clicking on an advertisement we display to you, you will
+              navigate to that advertiser's website or app. Your click will also
+              authorize us to share information we have collected about you with
+              the advertiser as part of your navigation to their website. For
+              <a
+                data-tcpa-modal="//dhe4oz50378wj.cloudfront.net/img/privacy-policy/contact-information-1.png"
+                href="javascript:void(0);"
+                >example</a
+              >, information that helps the advertiser understand you are
+              navigating from our website, whether your navigation to our
+              marketplaces is based on a referral from one of our marketing
+              partners, and information about the advertisement you clicked on
+              to navigate to their website.
+            </li>
+            <li>
+              Using our web forms on our websites or our web forms embedded in
+              websites of our third party partners, to ask us to identify and
+              connect you with advertisers that may best match your request or
+              that are otherwise relevant to your request. For
+              <a
+                data-tcpa-modal="//dhe4oz50378wj.cloudfront.net/img/privacy-policy/driver-details-1.png"
+                href="javascript:void(0);"
+                >example</a
+              >, the products and services you have expressed interest in or the
+              quote or rates you have requested. When you complete and submit
+              one of our web forms:
+              <ul>
+                <li>
+                  You instruct us to share the information you provided to us in
+                  your request (including certain information we collected
+                  automatically when you used our web forms to submit the
+                  request) with advertisers participating in our marketplaces so
+                  they will know your request is coming from us, whether you
+                  were referred to us by one of our business partners, and so
+                  they can process and respond to your request. For
+                  <a
+                    data-tcpa-modal="//dhe4oz50378wj.cloudfront.net/img/privacy-policy/contact-information-2.png"
+                    href="javascript:void(0);"
+                    >example</a
+                  >, when you instruct us to share your information with our
+                  network of advertisers they will use your information to
+                  contact you (e.g., phone, email, text) and provide you with
+                  information about the products and services you are interested
+                  in, provide you the quote or rates you requested, or even
+                  allow you to purchase the products and services that interest
+                  you directly from them.
+                </li>
+                <li>
+                  In response to your request we will also display the
+                  advertisers' advertisements (e.g., online ads, products or
+                  services information, rates, or other relevant information or
+                  content) in our marketplace to you. By clicking on an
+                  advertisement we display to you, you will navigate to that
+                  advertiser's website or app and, as noted above, we will share
+                  the information we collected about you and the advertisement
+                  you clicked on as part of your navigation to their website.
+                  Once you are on the advertiser's website, they may ask you to
+                  provide additional information so they may further assist you
+                  with your request. To improve your experience and interaction
+                  with the advertiser, you may see the information you asked us
+                  to share with them pre-populated on the advertiser's website
+                  such as in their webform on their website. For
+                  <a
+                    data-tcpa-modal="//dhe4oz50378wj.cloudfront.net/img/privacy-policy/quote-1.png"
+                    href="javascript:void(0);"
+                    >example</a
+                  >, if you completed one of our web forms to connect with
+                  advertiser's offering health insurance, we will display to you
+                  the top matches from our network of advertisers who may
+                  interest you. When you click on one of the advertisements we
+                  display to you, you will navigate to that advertiser's website
+                  where they have pre-filled the information you asked us to
+                  share in their online form.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Using our telephone numbers displayed on our websites or on third
+              party websites (for
+              <a
+                data-tcpa-modal="//dhe4oz50378wj.cloudfront.net/img/privacy-policy/phone-number-flow.png"
+                href="javascript:void(0);"
+                >Telephone Options</a
+              >, in response to a Google search) to call us or use the features
+              and functionality we provide on our websites and web forms to ask
+              us to call or text you, to ask us to identify and connect you with
+              advertisers that may best match your request or that are otherwise
+              relevant to your request. In some cases you may also ask an
+              advertiser who participates in our marketplaces to transfer your
+              call with them to us so you may use our marketplaces via your
+              phone call. When you submit information to us in your call:
+              <ul>
+                <li>
+                  You instruct us to share the information you provided to us in
+                  your request with advertisers participating in our
+                  marketplaces so they will know your request is coming from us
+                  and so they can process and respond to your request. You may
+                  also instruct us to transfer your call from us to the
+                  advertiser(s) that interest you. For
+                  <a
+                    data-tcpa-modal="//dhe4oz50378wj.cloudfront.net/img/privacy-policy/contact-information-3.png"
+                    href="javascript:void(0);"
+                    >example</a
+                  >, when you instruct us to share your information with our
+                  network of advertisers they will use your information to
+                  contact you (e.g., phone, email, text) and provide you with
+                  information about their products and services you are
+                  interested in, provide you the quote or rates you requested,
+                  or even allow you to purchase the products and services that
+                  interest you directly from them. Additionally, in response to
+                  your request we will also provide the advertiser’s products or
+                  services information, rates or quotes, or other relevant
+                  information or content to you during your call with us. We may
+                  also send this information to you via email, text, or sequent
+                  phone calls or texts based on your consent, the notices we
+                  provide to you (including this Policy), and your instructions
+                  to us.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Signing up for one of our email marketing lists to receive
+              advertisements, marketing, and other product or services
+              information, content, news, and updates from us about our
+              services, our marketplaces, and our network of advertisers and
+              their products and services. We use the information we collect
+              about you to personalize your experience for those lists to which
+              you subscribe.
+            </li>
+          </ul>
+
+          <p>
+            The information that we collect and process to provide our services
+            and the sources of this information includes:
+          </p>
+
+          <ul>
+            <li>
+              Information you provide to us when you use our marketplaces.
+            </li>
+            <li>
+              Information we collect automatically from you when you use our
+              marketplaces.
+            </li>
+            <li>
+              Information we get from advertisers, business partners, third
+              parties, and other sources about you.
+            </li>
+            <li>Any other information you choose to provide to us.</li>
+          </ul>
+
+          <p>
+            For each of these, we use the information we collect for the
+            following business purposes to:
+          </p>
+
+          <ul>
+            <li>Provide our services to you;</li>
+            <li>Process your request(s);</li>
+            <li>Advertise and market our services to you;</li>
+            <li>Communicate with you;</li>
+            <li>Understand how our services are used;</li>
+            <li>Conduct research;</li>
+            <li>Improve and protect our services;</li>
+            <li>Develop new products and services; and</li>
+            <li>
+              Comply with applicable laws, rules, regulations, and policies.
+            </li>
+          </ul>
+
+          <p>
+            Additional details with respect to the above are provided below
+            including in
+            <a href="#what-info-and-source"
+              >What information do we collect and from what sources?</a
+            >,
+            <a href="#how-we-use-your-information"
+              >How and for what business purposes do we use the information we
+              collect?</a
+            >, and
+            <a href="#sharing-information-info"
+              >When, how, and with whom do we share the information we
+              collect?</a
+            >.
+          </p>
+
+          <h2 id="policy-not-cover">What does this Policy not cover?</h2>
+
+          <p>
+            Websites and apps maintained by other businesses are not covered by
+            this Policy. The privacy policy of such businesses or advertisers
+            applies to any information you provide to them or is collected
+            automatically by them (or their agents, service providers, or
+            partners) from you. You can review their privacy policy on their
+            website or app to learn how they receive and process your
+            information. In some cases, they may use a separate service provider
+            to receive and process your information.
+          </p>
+
+          <p>
+            The websites and apps maintained by other businesses that are not
+            covered by this Policy include the websites and apps owned and
+            operated by advertisers participating in our network of advertisers
+            (that you connect with through our marketplaces). For example, when
+            you use our marketplaces to connect with our network of advertisers,
+            the advertisers we connect you with will handle the information you
+            instructed us to share with them (to learn more about the
+            advertiser’s products and services that interest you, or to request
+            a quote or rates, or to purchase their products and services) and
+            any other information you share with them according to their own
+            terms and policies, not MediaAlpha's.
+          </p>
+
+          <h2 id="learn-more-privacy-center">
+            Learn more in our
+            <a
+              href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+              >Privacy Center</a
+            >
+            about managing your privacy.
+          </h2>
+
+          <h2 id="what-info-and-source">
+            What information do we collect and from what sources?
+          </h2>
+
+          <p>
+            The information we collect and process about you depends on how you
+            use our marketplaces. For
+            <a
+              data-tcpa-modal="//dhe4oz50378wj.cloudfront.net/img/privacy-policy/phone-number-landing.png"
+              href="javascript:void(0);"
+              >example</a
+            >, if you use our websites rather than our web forms or when you use
+            our telephone numbers to call us rather than asking us to call you
+            or text you.
+          </p>
+
+          <p>
+            The information we collect and process about you also depends on the
+            purpose of your use. For example, we collect different information
+            when you use our marketplaces to connect you with advertisers that
+            offer insurance products and services than when you use our
+            marketplaces to connect with advertisers that offer travel products
+            and services.
+          </p>
+
+          <p>
+            It is important to remember that you may use our marketplaces by
+            using our websites, by using our web forms embedded in our websites,
+            by using our web forms that are embedded in the third-party websites
+            that we partner with, by calling us using the telephone numbers we
+            provide on our websites, by asking an advertiser to transfer the
+            call you made to them to us, or by asking us to call, email, or text
+            you, and by signing up for one of our marketing lists.
+          </p>
+
+          <ul>
+            <li class="anchor-header" id="info-you-provide">
+              <strong
+                >Information you provide to us and we collect from you when you
+                use our web forms, when you call us, and when we call or text
+                you
+              </strong>
+            </li>
+            <p>
+              When you use our web forms, or when you call us, or when you ask
+              us to call or text you, the specific categories of information
+              that you may provide us and that we will collect from you will be
+              presented to you at the time you make your request. For example,
+              if you are using our marketplaces to connect with advertisers for
+              travel products and services we may ask you to provide us your
+              home and destination airports, number of stops, number of
+              travelers, and travel dates so that we can identify and connect
+              you with relevant advertisers, and display the top matches from
+              our network of advertisers to you by showing you the flight and
+              hotel options available from them.
+            </p>
+            <p>
+              Here are the categories of information you may provide to us and
+              that we collect from you (which may also include the same
+              information about other members of your household like your spouse
+              or child) through our web forms, when you call us, and when you
+              ask us to call or text you:
+            </p>
+          </ul>
+
+          <table style="width: 100%; margin-bottom: 24px; text-align: left">
+            <tbody>
+              <tr>
+                <th style="width: 20%">Advertiser Products and Services</th>
+                <th style="width: 20%">
+                  Specific Types of Advertiser Products and Services
+                </th>
+                <th style="width: 60%">Categories of Information Collected</th>
+              </tr>
+              <tr>
+                <td>Insurance</td>
+                <td>
+                  Home, vehicle, motorcycle or other property Insurance types
+                </td>
+                <td>
+                  Name, email, phone, address, zip code, and depending on the
+                  type of insurance requested we may also ask you for gender,
+                  age when first licensed, birthday, marital status, home
+                  details, vehicle year, vehicle make, vehicle model, vehicle
+                  type, education, credit rating, activate or inactive drivers
+                  license, whether a SR-22 was filed, whether you are military
+                  affiliated, whether you own, rent, or have a garage, past
+                  insurance company details, status of financed loan, vehicle
+                  purpose (work, school, mileage, own-lease), insurance
+                  expectations for deductibles, and any other information we
+                  request from you at the time you make your request that is
+                  relevant to the type of insurance products or services you are
+                  inquiring about.
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Health Insurance</td>
+                <td>
+                  Name, address, zip code, phone, email, gender, date of birth,
+                  type of insurance and coverage, health conditions (e.g.,
+                  typically yes or no response questions whether certain health
+                  conditions may be applicable to you or anyone in your
+                  household such as whether you or your spouse is pregnant, has
+                  a history of tobacco use, heart attacks, or other health
+                  conditions), physical information such as height and weight,
+                  whether coverage should include minors/spouse, household
+                  income, and any other information we request from you at the
+                  time you make your request that is relevant to the type of
+                  insurance products or services you are inquiring about.
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Workers Compensation Insurance</td>
+                <td>
+                  Business name, business address, business owner's name, email,
+                  phone, zip code, business category, number of years in
+                  business, number of employees, business legal entity type,
+                  number of business locations, whether currently insured, and
+                  any other information we request from you at the time you make
+                  your request that is relevant to the type of insurance
+                  products or services you are inquiring about.
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Pet Insurance</td>
+                <td>
+                  Name, email, zip code, pet information, and any other
+                  information we request from you at the time you make your
+                  request that is relevant to the type of insurance products or
+                  services you are inquiring about.
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Flights</td>
+                <td>
+                  Name, address, phone, email, home and travel destination
+                  (i.e., to/from airports), number of stops, travel dates,
+                  number of travelers, and any other information we request from
+                  you at the time you make your request that is relevant to the
+                  type of flight products or services you are inquiring about.
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Hotel</td>
+                <td>
+                  Name, address, phone, email, travel city, check-in and
+                  check-out dates, number of hotel rooms, number of guests, and
+                  any other information we request from you at the time you make
+                  your request that is relevant to the type of hotel products or
+                  services you are inquiring about.
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Car Rental</td>
+                <td>
+                  Name, address, phone, email, pickup/drop off locations,
+                  pickup/drop off dates and times, car rental type, and any
+                  other information we request from you at the time you make
+                  your request that is relevant to the type of car rental
+                  products or services you are inquiring about.
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Cruise</td>
+                <td>
+                  Name, address, phone, email, preferred cruise line, desired
+                  cruise destinations, cruise dates, length of cruise, number of
+                  passengers, and any other information we request from you at
+                  the time you make your request that is relevant to the type of
+                  cruise products or services you are inquiring about.
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Vacation</td>
+                <td>
+                  Name, address, phone, email, home and travel destination
+                  (i.e., to/from), travel dates, number of travelers, and any
+                  other information we request from you at the time you make
+                  your request that is relevant to the type of travel products
+                  or services you are inquiring about.
+                </td>
+              </tr>
+              <tr>
+                <td>Finance</td>
+                <td></td>
+                <td>
+                  Name, address, phone, email, and any other information we
+                  request from you at the time you make your request that is
+                  relevant to the type of advertiser's products or services you
+                  are inquiring about.
+                </td>
+              </tr>
+              <tr>
+                <td>Other Products and Services</td>
+                <td></td>
+                <td>
+                  Name, address, phone, email, and any other information we
+                  request from you at the time you make your request that is
+                  relevant to the type of advertiser's products or services you
+                  are inquiring about.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="dont-provide-information">
+            What if you don't provide us with certain information MediaAlpha is
+            asking for in our marketplaces?
+          </h2>
+
+          <p>
+            All of the information we ask you to provide is required for our
+            marketplaces to work and for us to provide our services to you. If
+            you elect to not provide us with the requested information or
+            otherwise provide information that is not usable, the quality of
+            your experience might be affected. This means our ability to match
+            and connect you with the most relevant advertisers may be impacted.
+          </p>
+
+          <ul>
+            <li class="anchor-header" id="sensitive-personal-info-categories">
+              <strong
+                >Categories of sensitive personal information you provide and we
+                collect when you use our web forms, when you call us, or when we
+                call you</strong
+              >
+              <p>
+                When you use our marketplaces to request rates or quotes for
+                health insurance from our network of advertisers or to learn
+                more about their health insurance products and services, we
+                will, depending on the type of health insurance and coverage you
+                are inquiring about, ask you questions on whether certain health
+                conditions may be applicable to you or your household such as
+                whether you or your spouse is pregnant, has a history of tobacco
+                use, cardiovascular disease, or other health conditions. This is
+                typically in the form of yes or no questions (e.g., Are you or
+                your spouse pregnant? or Do any of the following medical
+                conditions apply to you or your spouse?). We may also ask you
+                questions related to your physical condition such as your height
+                and weight.
+              </p>
+              <p>
+                This type of information may reveal a physical or mental health
+                diagnosis or condition and may be considered “sensitive
+                information” (also known as sensitive personal information)
+                under certain privacy laws, rules, and regulations.
+              </p>
+              <p>
+                We use this information (as more fully described in
+                <a href="#how-we-use-your-information"
+                  >How and for what business purposes do we use the information
+                  we collect?</a
+                >) to provide our services to you, to enter into and perform our
+                <a href="/terms-and-condition.html">Terms of Use</a>
+                with you, to comply with legal and regulatory requirements, to
+                protect the life or physical safety of you or others, or as
+                otherwise permissible for our internal business purposes
+                consistent with applicable laws, rules, and regulations.
+              </p>
+              <p>
+                We do not sell your sensitive information. We do not process or
+                otherwise share sensitive information for the purpose of
+                cross-context behavioral advertising or targeted advertising.
+                The agreements we have with our network of advertisers and our
+                business partners require them to secure any personal
+                information we provide to them, limit how they use such
+                information, and comply with national, state, and other
+                applicable privacy regulations.
+              </p>
+              <p>
+                If at any time you wish to request that we delete your
+                information, or revoke the consent you gave us or object to our
+                processing of your information, or if you would like to make any
+                other request regarding your sensitive information, you may do
+                so at any time by submitting a request in our
+                <a
+                  href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                  >Privacy Center</a
+                >, by emailing us at DPO@mediaalpha.com, or by calling us at
+                1-833-549-0351
+              </p>
+            </li>
+          </ul>
+
+          <ul>
+            <li class="anchor-header" id="information-we-collect">
+              <strong
+                >Information we collect that we process to create aggregated,
+                anonymous, or de-identified Information</strong
+              >
+              <p>
+                For the information you provide to us and that we collect from
+                you or that we receive from our advertisers, business partners,
+                and other sources that are described below, we may at times
+                process such information to create aggregated, anonymous, or
+                de-identified information that is no longer considered personal
+                information or that can no longer reasonably be used to infer
+                information about, or otherwise be linked to or reasonably
+                linked to, a particular individual or household. We will
+                maintain and use this type of information in an aggregated,
+                anonymous, or de-identified form and not attempt to identify any
+                individual from the information except as required or permitted
+                by applicable laws, rules, or regulations.
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li class="anchor-header" id="info-we-collect-websites-webform">
+              <strong
+                >Information we collect from you automatically when you use our
+                websites and web forms</strong
+              >
+              <p>
+                Cookies are small pieces of text used to store information on
+                web browsers (go to allaboutcookies.org or youronlinechoices.eu
+                to learn more about such technologies). We use cookies and
+                similar technologies (such as pixels, tags, beacons, scripts,
+                and other technologies and unique identifiers), including data
+                that we store on your web browser or device, identifiers
+                associated with your device and other software to:
+              </p>
+              <ul>
+                <li>Provide our services;</li>
+                <li>
+                  Make our services work for you and for our network of
+                  advertisers;
+                </li>
+                <li>Help us understand how our services are used;</li>
+                <li>
+                  Personalize your experience and the content we show you;
+                </li>
+                <li>Improve our services;</li>
+                <li>
+                  Measure the performance of our network of advertiser's
+                  advertisements and other content we show you; and
+                </li>
+                <li>Protect and improve our services.</li>
+              </ul>
+              <p>
+                All of which helps us to provide a safer and more meaningful
+                experience.
+              </p>
+              <p>
+                The cookies we use may contain unique identifiers (which may
+                uniquely identify your device or browser), and reside, among
+                other places, on your computer or mobile device, in emails we
+                send to you, and on our websites and web forms. These cookies
+                may also transmit information about you and your use of our
+                services, such as your browser type, device type, search
+                preferences, IP address (which may be treated as personal
+                information in some jurisdictions, but which we use only to
+                identify your general geographic area and to comply with
+                applicable laws, rules, regulations, and orders) and data
+                relating to our network of advertiser’s advertisements and other
+                content that display to you or that you have interacted with,
+                and the date and time of your use. Cookies may be persistent or
+                stored only during an individual session.
+              </p>
+              <p>
+                With the above in mind, below is a more detailed explanation of
+                the types of information we collect automatically using cookies
+                and other similar technologies when you use our websites and web
+                forms (including those embedded in those third-parties we
+                partner with) and the business purpose:
+              </p>
+            </li>
+          </ul>
+
+          <table style="width: 100%; text-align: left">
+            <tbody>
+              <tr>
+                <th style="width: 20%">Business Purpose</th>
+                <th style="width: 80%">Description</th>
+              </tr>
+              <tr>
+                <td>Processes</td>
+                <td>
+                  <p>
+                    Intended to make our services work including in the way you
+                    expect them to work. For example, we use cookies that:
+                  </p>
+                  <ul>
+                    <li>
+                      Tell us whether you have already signed up for an account.
+                    </li>
+                    <li>
+                      Help us remember you while you use our marketplaces. For
+                      example, when you start completing a web form and you
+                      pause or leave and then return later to complete and
+                      submit the form. Remembering you helps us populate the web
+                      form you were using with the information you previously
+                      provided to us (when we recognize you) to make your use of
+                      our services helpful and more efficient.
+                    </li>
+                    <li>
+                      Help us process and respond to your request including
+                      communicating your request to our network of advertisers
+                      so they know your request is coming from one of our
+                      marketplaces, the nature of your request to them, and from
+                      which of our marketplaces you are navigating from to their
+                      websites. For example, when you click on an advertiser's
+                      ad in our marketplace.
+                    </li>
+                    <li>
+                      Help us show you more relevant quotes and rates and
+                      content from our network of advertisers in response to
+                      your request and to make your use of our services more
+                      efficient while you are using them.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Authentication, Security, and Compliance</td>
+                <td>
+                  Intended to prevent fraud, protect the information we collect
+                  from unauthorized parties, and comply with legal requirements.
+                  For example, we use cookies to determine if you are logged in.
+                </td>
+              </tr>
+              <tr>
+                <td>Preferences</td>
+                <td>
+                  Intended to remember information about how you prefer our
+                  services to behave and look. For example, we use a cookie that
+                  tells us whether you have declined to allow us to use certain
+                  cookies.
+                </td>
+              </tr>
+              <tr>
+                <td>Notifications</td>
+                <td>
+                  Intended to allow or prevent notices of information or options
+                  that we think could improve your use of our services. For
+                  example, we use a cookie that stops us from showing you
+                  notifications if you have already seen.
+                </td>
+              </tr>
+              <tr>
+                <td>Usage and Analytics</td>
+                <td>
+                  <p>
+                    Intended to help us understand how visitors and users use
+                    our service. For example, we use cookies that tells us:
+                  </p>
+                  <ul>
+                    <li>
+                      How you interact with our websites and web forms including
+                      which ones you use and which search queries you submit;
+                    </li>
+                    <li>
+                      Which pages you have visited on our websites and which
+                      ones you visited immediately before or after navigating to
+                      our website.
+                    </li>
+                    <li>
+                      Which advertiser's advertisements and quotes and rates you
+                      select, which advertiser's websites you visit by using our
+                      marketplaces, including the time and date of your visit,
+                      and your interactions with our websites and advertisers'
+                      websites. For example, understanding when you leave our
+                      site to go to an advertiser's site or when you use our
+                      webform on a third-party site;
+                    </li>
+                    <li>
+                      Which of our emails and other communications we send to
+                      you including whether you opened, forwarded or selected a
+                      link or content in such email; and
+                    </li>
+                    <li>other demographic and usage information.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            Most web browsers are set to accept cookies by default. If you
+            prefer, you can usually remove or reject browser cookies through the
+            settings on your browser or device. Keep in mind, though, that
+            removing or rejecting cookies may affect the availability and
+            functionality of our websites and web forms. To learn more about
+            your choices, please check out
+            <a href="#cookies-and-technologies"
+              >Cookies and Other Technologies</a
+            >.
+          </p>
+
+          <ul>
+            <li class="anchor-header" id="info-recieved-from-other-sources">
+              <strong
+                >Information we receive from advertisers, business partners,
+                third parties, and other sources</strong
+              >
+              <p>
+                We receive information about you from our network of advertisers
+                and may also receive information about you from our business
+                partners that provide us services (such as suppliers, service
+                providers, contractors, and consultants), third parties, or
+                other online or offline sources. We require each of these
+                partners to have rights to collect, use, and share your
+                information before providing any information to us. We also
+                receive information from publicly available sources, research
+                institutions, and professional and non-profit groups.
+              </p>
+              <p>
+                Here are some examples of the types of information we receive
+                about you:
+              </p>
+              <ul>
+                <li>
+                  Confirmation of purchases, transactions, and requests (e.g.,
+                  rates, quotes) you make with our network of advertisers;
+                </li>
+                <li>
+                  How you interact with our network of advertisers such as what
+                  websites you visit and whether a call you made to us that we
+                  transferred (at your request) to an advertiser in our network
+                  was successful;
+                </li>
+                <li>
+                  Confirmation on whether you are an existing customer or member
+                  with one of our advertisers;
+                </li>
+                <li>
+                  Cookie data which helps us match your activities with our
+                  network of advertisers to your account, if you have one with
+                  us, or to other information we have about you so that we can
+                  provide our services to you and to our network of advertisers;
+                </li>
+                <li>
+                  Communications (e.g., calls, email, text) that our network of
+                  advertisers have with you as part of our performance of our
+                  services to you and to their business, like helping them make
+                  contact with you or manage their communications with you.
+                </li>
+              </ul>
+              <p>
+                To learn how an advertiser in our network processes or shares
+                your information, read their privacy policy or contact them
+                directly.
+              </p>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <strong
+                >Information you provide us when you sign up for one of our
+                email marketing lists</strong
+              >
+              <p>
+                When you sign up for one of our mailing lists (to receive
+                advertisements, marketing, and other product or services
+                information, content, news, and updates from us about our
+                services, our marketplaces, and our network of advertisers and
+                their products and services) we collect your email address and
+                information about the products and services, rates, and quotes
+                you are interested in.
+              </p>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <strong>Any other information you choose to provide to us</strong>
+              <p>
+                When you contact us, including by mail or email, or communicate
+                with us in any other way, we'll collect whatever information you
+                volunteer or that we need to resolve your question or request.
+                The categories of information we collect from you or that you
+                can provide to us through mail, email, or other means depends on
+                the purpose of your communication to us.
+              </p>
+            </li>
+          </ul>
+
+          <h2 id="how-we-use-your-information">
+            How and for what business purposes do we use the information we
+            collect?
+          </h2>
+
+          <p>
+            Keep in mind the information we collect through cookies and other
+            online tracking technologies is used along with other information we
+            collect for the purposes outlined in this Policy. We use the
+            information we collect to:
+          </p>
+
+          <ul>
+            <li>
+              Process and fulfill your request to connect you with our network
+              of advertisers to learn more about those advertisers' products and
+              services that interest you, for a quote or rates from our network
+              of advertisers, or so you may purchase their products and services
+              directly from them.
+            </li>
+            <li>
+              Communicate with you, including by phone calls, email, mail, and
+              text messages. For
+              <a
+                data-tcpa-modal="//dhe4oz50378wj.cloudfront.net/img/privacy-policy/contact-information-3.png"
+                href="javascript:void(0);"
+                >example</a
+              >, when you provide your contact information to us you are
+              registering to receive communications from us directly or through
+              a third-party which may include using the foregoing communication
+              methods to:
+              <ul>
+                <li>
+                  Share information about our services (including about our
+                  marketplaces).
+                </li>
+                <li>
+                  Share information about an advertiser's products and services
+                  that we think may interest you. For example, if you request to
+                  be added to any of our mailing lists, we will periodically
+                  send you newsletters and other emails with offers and
+                  promotions. Our emails will always identify MediaAlpha or one
+                  of our branded sites as the sender. You may unenroll any time
+                  by selecting “unsubscribe” in our emails.
+                </li>
+                <li>
+                  Communicate with you to process and fulfill your request.
+                </li>
+                <li>Respond to your inquiries.</li>
+              </ul>
+            </li>
+            <li>
+              Remember your settings, choices, and the information you inputted
+              into our marketplaces to provide you with our services and a
+              personalized experience. For example, when you begin completing
+              one of our web forms, we will remember the information you
+              provided as you complete the form to personalize and improve your
+              experience. This way if you need to stop and return later to
+              complete the form you do not need to start over again.
+            </li>
+            <li>
+              Provide you with relevant advertisements and other content from
+              our network of advertisers based on your request, your activity on
+              our services, and your activity on other sites and services not
+              operated by us (this is based on the
+              <a href="#info-recieved-from-other-sources"
+                >Information we receive from advertisers, business partners,
+                third parties, and other sources</a
+              >). For example, when you use our web forms to make a request for
+              a quote or rates from our network of advertisers, we will show you
+              the top matches. If you then select one of the matches you will
+              navigate to their website where you may provide the advertiser
+              with additional information for them to provide a more detailed
+              quote or to purchase the product or service. The advertiser will
+              communicate some of this information back to us so we can show you
+              the quote or rates and so we are able to understand whether they
+              processed your request and whether your interaction with them was
+              successful.
+            </li>
+            <li>
+              Advertise, promote, and market our business, our services and our
+              marketplaces on or by using other third-party websites, apps, and
+              products and services (e.g., social media and other online
+              publishers, messaging, email, radio, television and other
+              multi-media, post mail, etc.).
+            </li>
+            <li>
+              Provide and improve our services (including monitoring, analyzing,
+              and improving the operation, delivery, performance, and usability
+              of our marketplaces), ad placement, ad targeting, and ad campaign
+              success and measurement, including through the use of your
+              location information (e.g., city, state, region, country), both on
+              and off our marketplaces. See
+              <a href="#cookies-and-technologies"
+                >Cookies and Other Technologies</a
+              >
+              to learn more about our advertising practices and your choices.
+            </li>
+            <li>
+              Develop, operate, improve, deliver, maintain, and protect our
+              services, including our marketplaces.
+            </li>
+            <li>Monitor and analyze trends and usage of our services.</li>
+            <li>
+              Aggregate information we receive from you and third parties to
+              help understand individual needs, customize our services and
+              offerings, and provide everyone better service.
+            </li>
+            <li>
+              Conduct research and analytics designed to understand our customer
+              base and improve and grow our business, products, services, and
+              customer experience.
+            </li>
+            <li>
+              Enhance our services (including our marketplaces) and your
+              experience with them by using information we collect automatically
+              by cookies and other technologies.
+            </li>
+            <li>Enhance the safety and security of our services.</li>
+            <li>
+              Verify your identity and prevent fraud or other unauthorized or
+              illegal activity.
+            </li>
+            <li>
+              Enforce our
+              <a href="/terms-and-condition.html">Terms of Use</a>
+              and other usage policies.
+            </li>
+            <li>
+              Comply with legal requirements, including applicable laws, rules,
+              regulations, and orders.
+            </li>
+          </ul>
+
+          <h2 id="sharing-information-info">
+            When, how, and with whom do we share the information we collect?
+          </h2>
+
+          <p>
+            As described in this Policy, our marketplaces are designed to
+            connect you with advertisers so you can learn more about their
+            products and services, so you can request quotes and rates directly
+            from them, and so you can purchase from them those products and
+            services of your choosing. With this in mind, we share the
+            information we have collected about you in the following ways:
+          </p>
+
+          <ul>
+            <li>
+              <strong
+                >With advertisers when you click on an advertisement.</strong
+              >
+              When you click on an advertisement displayed on our websites
+              (e.g., online ads, text, video, or other interactive content,
+              products and services information, rates, quotes, links, etc.
+              (example)), you will navigate to that advertiser's (which may
+              include businesses, agents, carriers, lead aggregators, and other
+              types of advertisers in our network) website or app and your click
+              will authorize us to share information we have collected about you
+              with the advertiser as part of your navigation to their website.
+              For example, information that helps the advertiser understand you
+              are navigating from our website and information about the
+              advertisement you clicked on to navigate to their website.
+            </li>
+            <li>
+              <strong
+                >With advertisers when you use our web forms, or when you call
+                us, or when we call, email, or text you.</strong
+              >
+              When you submit a request through our marketplaces by using our
+              web forms embedded in our websites or our web forms embedded in
+              the websites of the third-parties we partner with, by calling us,
+              or by asking us to call, email, or text you, you instruct us to
+              share and we will share the information you submit in your request
+              with advertisers participating in our marketplaces (which may
+              include businesses, agents, carriers, lead aggregators, and other
+              types of advertisers in our network) so they know your request is
+              coming from us and so they can process and respond to your
+              request. Please keep in mind the following important details when
+              using our web forms, when calling us, or when we call, email, or
+              text you:
+              <ul>
+                <li>
+                  By submitting your request, you agree that we and our
+                  advertisers may contact you by phone (including through
+                  automated calling, live operators, or using recorded
+                  messages), text messages, email, or postal mail (the methods
+                  used to contact you will be based on the information you
+                  provide to us and the consent we receive from you), to
+                  process, respond to, and fulfill your request or to market
+                  products and services that might be of interest to you, even
+                  if you have opted into the National Do Not Call List
+                  (administered by the Federal Trade Commission) or any similar
+                  mechanism to opt-out of receiving phone calls or email. If
+                  later you wish not to be contacted by any advertiser, then you
+                  will need to contact such advertiser directly to make a
+                  request (see the advertiser's privacy policy to learn how to
+                  exercise your privacy choices with such advertiser).
+                </li>
+                <li>
+                  The categories of information we share with advertisers
+                  depends on the marketplaces you are using and the nature of
+                  your request, the advertisers products and services you are
+                  interested in, and the type of quote and rates you are
+                  requesting. For
+                  <a
+                    data-tcpa-modal="//dhe4oz50378wj.cloudfront.net/img/privacy-policy/contact-information-4.png"
+                    href="javascript:void(0);"
+                    >example</a
+                  >, if you are requesting a quote or rates for car insurance,
+                  we may share with advertisers your name, address, telephone
+                  number, email, information about your cars and driver history,
+                  and any other information you provide in our marketplace (to
+                  learn more, see
+                  <a href="#info-you-provide"
+                    >Information you provide to us and we collect from you when
+                    you use our web forms, when you call us, and when we call or
+                    text you</a
+                  >).
+                </li>
+                <li>
+                  The information you instruct us to share with advertisers and
+                  the information you provide directly to such advertisers is
+                  subject to each advertiser's privacy policy.
+                  <ul>
+                    <li>
+                      Please read each advertiser's privacy policy to learn more
+                      about their information practices, how they handle your
+                      information, and the choices you can make about how they
+                      collect and use your information.
+                    </li>
+                    <li>
+                      Please note, an advertiser may keep the information we
+                      shared with them (that you provided to us through our
+                      marketplaces) whether or not you elect to purchase or use
+                      their services.
+                    </li>
+                    <li>
+                      The agreements we have with those advertisers that partner
+                      with us require them to secure any personal information
+                      (also known as personal data) we provide to them, limit
+                      how they use such information, and comply with national,
+                      state, and other applicable privacy regulations.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong
+                >With our business partners and other third parties.</strong
+              >
+              To provide and protect our services, we share the information we
+              have about you with those businesses that provide services to us
+              including our third-party vendors, suppliers, service providers,
+              and other third parties under the following circumstances:
+              <ul>
+                <li>
+                  To help us advertise, promote, and market our business, our
+                  services and our marketplaces on or by using other third-party
+                  websites, apps, and products and services (e.g., social media
+                  and other online publishers, messaging, email, radio,
+                  television and other multi-media, post mail, etc.).
+                </li>
+                <li>
+                  To measure and optimize the performance of our business, our
+                  services, and marketplaces including ad performance and
+                  delivery so we can deliver more relevant ads in our
+                  marketplaces and ads we may place on other third-party
+                  websites, apps, and products and services.
+                </li>
+                <li>
+                  To optimize our services and marketplaces so our network of
+                  advertisers are able to more easily reach their desired
+                  audience and market by sharing aggregated, non-personally
+                  identifiable, de-identified, and aggregated information (i.e.,
+                  information about you and other users collectively, but not
+                  specifically identifiable to you).
+                </li>
+                <li>
+                  To help us and others prevent fraud, which may include sharing
+                  device, usage, and other information we have about you.
+                </li>
+                <li>
+                  For legal, safety, and security reasons. This means we may
+                  share information about you if we reasonably believe that
+                  disclosing the information is needed to:
+                  <ul>
+                    <li>
+                      Comply with any valid legal process, governmental or law
+                      enforcement request, or applicable law, rule, or
+                      regulation (e.g., subpoenas, court orders, federal/state
+                      audits or similar circumstances, etc.).
+                    </li>
+                    <li>
+                      Investigate, remedy, or enforce potential violations of
+                      our
+                      <a href="/terms-and-condition.html">Terms of Use</a>.
+                    </li>
+                    <li>
+                      Protect our rights, property, or safety or those of the
+                      advertisers, our suppliers, or others.
+                    </li>
+                    <li>Detect and resolve any fraud or security concerns.</li>
+                  </ul>
+                </li>
+                <li>
+                  As part of a merger or acquisition, asset sale, financing,
+                  liquidation, or bankruptcy. If we become involved in any
+                  merger, asset sale, financing, liquidation or bankruptcy, or
+                  other acquisition of all or some portion of our business by
+                  another company, we may share your information with that
+                  company before and after the transaction closes.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Keep in mind, we have agreements with our vendors, suppliers,
+              service providers, contractors, and consultants requiring them to
+              secure any personal information we provide to them, limit how they
+              use such information, and comply with national, state, and other
+              applicable privacy laws, rules, and regulations.
+            </li>
+          </ul>
+
+          <h2 id="how-third-party">
+            How do third-party content, links, and integrations in our
+            marketplaces work?
+          </h2>
+
+          <p>
+            Our marketplaces contain various forms of advertisements from our
+            network of advertisers which may be presented to you in various
+            forms including as online ads, text, video, or other interactive
+            content, products and services information, rates, quotes, links,
+            etc. (<a
+              data-tcpa-modal="//dhe4oz50378wj.cloudfront.net/img/privacy-policy/insurer-ads-2.png"
+              href="javascript:void(0);"
+              >Advertiser Results</a
+            >). For example, when you submit information through our websites
+            and web forms, in response to your request to be connected with our
+            network of advertisers, you will be presented with advertisements
+            displayed as content and links to websites owned and operated by
+            advertisers participating in our marketplaces. By clicking on these
+            links you will navigate to their website or app where you may learn
+            more about their products and services or request a quote or rates
+            directly from them, or purchase products and services from them, or
+            communicate directly with them. As noted above, when you click on an
+            advertisement displayed to you, you will be providing information to
+            the advertiser as well as to us and any other business partners or
+            other third parties we work with. We are not responsible for how an
+            advertiser and such other third parties collect or use your
+            information. As always, we encourage you to read the privacy
+            policies of every advertiser and third-party service that you visit
+            or use. To learn more, see
+            <a href="#sharing-information-info"
+              >How and when we share the information we collect about you?</a
+            >
+          </p>
+
+          <h2 id="how-long-do-we-keep-the-info">
+            How long do we keep the information we collect?
+          </h2>
+
+          <p>
+            How long we keep the information we collect about you depends on the
+            amount, nature, and sensitivity of the information, the purpose for
+            which it was provided and the purposes for which the information is
+            used, whether we are able to obtain the business objective by other
+            means, the potential risk of harm from unauthorized use or
+            disclosure of the information, our legal, regulatory, tax,
+            accounting and other applicable obligations, and other similar
+            factors.
+          </p>
+
+          <p>
+            Generally, we retain the information we collect about you only for
+            as long as is reasonably necessary to fulfill the purpose for which
+            it was collected. For example, we keep the information we collect:
+          </p>
+
+          <ul>
+            <li>
+              Through our marketplaces (like your name, phone number, address,
+              email address, etc.) until you ask us to delete it.
+            </li>
+            <li>
+              For the length of time reasonably needed to fulfill the purposes
+              outlined in this Policy (including for as long as need to provide
+              you with our services), unless a longer retention period is
+              required or permitted by law.
+            </li>
+            <li>
+              For as long as necessary to resolve disputes and/or enforce our
+              rights and agreements.
+            </li>
+            <li>
+              If it is aggregated, anonymized, and/or de-identified (i.e., no
+              longer or otherwise not capable of identifying you) then
+              indefinitely.
+            </li>
+            <li>
+              In our backup or disaster recovery systems for a limited period of
+              time or as permitted by applicable law.
+            </li>
+          </ul>
+
+          <p>
+            If necessary, however, we may retain the information we collect
+            about you for longer periods of time after the set retention periods
+            and deadlines expire such as where we are required to do so in
+            accordance with legal, tax, and/or accounting requirements set by a
+            legislature, regulator, or other government authority. We may also
+            retain information longer as necessary to resolve disputes and
+            defend claims, as well as for any additional purpose based on the
+            choices you have made, such as to receive marketing communications.
+          </p>
+
+          <p>
+            Once retention of the information we collect about you is no longer
+            necessary for the purposes outlined above, we will either delete,
+            aggregate, anonymize, or de-identify the information or, if this is
+            not possible (for example, because the information is stored in
+            backup archives), then we will securely store the information we
+            have collected about you and isolate it from further processing
+            until deletion or deidentification is possible.
+          </p>
+
+          <p>
+            If you ever decide to stop using our marketplaces, you may ask us to
+            delete your information (see
+            <a href="#choices-and-control">Your Choices and Controls</a> to
+            learn more).
+          </p>
+
+          <p>
+            Keep in mind, while our systems are designed to carry out deletion
+            automatically, we cannot promise or guarantee that deletion will
+            occur within a specific timeframe. Also, there may be legal
+            requirements to keep and not delete your information when you make a
+            deletion request to us. This means we may suspend deletion of or not
+            delete your information if we receive valid legal process asking us
+            to preserve your information, if we receive reports of abuse or
+            other
+            <a href="/terms-and-condition.html">Terms of Use</a>
+            violations, or if your use of our marketplaces or your information
+            is flagged by our automated systems for abuse or other
+            <a href="/terms-and-condition.html">Terms of Use</a>
+            violations.
+          </p>
+
+          <h2 id="keep-infprmation-secure">
+            How do we keep the information we collect about you secure?
+          </h2>
+
+          <p>
+            The security of your personal information is very important, and we
+            take a number of steps to safeguard it. For example, we have
+            implemented technical and organizational security measures that are
+            designed to help protect your information from unauthorized access,
+            disclosure, use, and modification. We also maintain physical,
+            electronic, and procedural safeguards that comply with or exceed
+            federal standards to guard your information, and we aggregate,
+            de-identify, anonymize, or expunge data when it is no longer
+            necessary to provide services to our users or substantiate records
+            for an advertiser. From time-to-time, we review our security
+            procedures to consider appropriate new technologies and methods.
+          </p>
+
+          <p>
+            Even so, despite our efforts, no security measures are perfect,
+            impenetrable, or 100% secure. We cannot ensure, and do not warrant
+            or guarantee, that the information you transmit to us will remain
+            secure, nor do we guarantee that this information will not be
+            accessed, disclosed, altered, destroyed or used in an unauthorized
+            manner. These are the risks of being online and conducting business
+            online.
+          </p>
+
+          <p>
+            Of course, if we learn of a security breach, we may attempt to
+            notify you electronically so that you can take appropriate
+            protective steps. We may also post a notice on our services if a
+            security breach occurs. Depending on where you live, you may have a
+            legal right to receive a notice of a security breach in writing. If
+            you have any questions about the security of your information,
+            please
+            <a
+              href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns#contact-us"
+              >Contact Us</a
+            >.
+          </p>
+
+          <h2 id="cookies-and-technologies">Cookies and other Technologies</h2>
+
+          <p>
+            As discussed <a href="#info-we-collect-websites-webform">above</a>,
+            we use cookies and similar technologies (such as pixels, tags,
+            beacons, scripts, and other technologies and unique identifiers),
+            including data that we store on your web browser or device,
+            identifiers associated with your device and other software to
+            provide and make our services to you and to our network of
+            advertisers work. This means advertisers, our business partners
+            (including any other third parties working on our behalf or who
+            collect information on our services on our behalf), may
+            automatically receive certain information associated with you and/or
+            your device(s) as part of your use of our websites and web forms
+            through such browser or device-based collection technologies.
+          </p>
+
+          <p>
+            Many devices and browsers give you the option to manage and/or
+            disable cookies and other online tracking technologies. To opt-out
+            of the use of these technologies, you may change your browser
+            options to stop accepting cookies or to prompt you before accepting
+            cookies. To assist you, we compiled directions for some commonly
+            used browsers and devices in the table below. Keep in mind that not
+            all devices and browsers are the same so the methods described below
+            may not work for your browser, browser version, or device and may
+            change at any time. We encourage you to refer to the relevant
+            instructions for your particular device or browser.
+          </p>
+
+          <p>
+            Before you dive in, please note, if you opt out of the collection
+            and use of information via cookies and other technologies, you may
+            still see customized advertising displayed by advertising networks
+            from which you have not opted out. In addition, your opt-out will
+            not prevent any advertising network from displaying advertising that
+            is not customized to you and your interests and, consequently, may
+            be less relevant to you. You will need to make such choices on each
+            browser and device you may use to visit our websites and web forms.
+          </p>
+
+          <ul>
+            <li>
+              <strong>Disabling Cookies in Browsers</strong> When you elect to
+              opt-out on a website, including our websites, an opt-out cookie is
+              placed on your device. Then when you visit the same website, the
+              opt-out cookie tells the website you opted out. This means that
+              blocking all cookies may then prevent the websites from operating
+              as expected and may also prevent your consent choices from being
+              stored. This may mean that if you opt-out and then block cookies,
+              we may not know about, or be able to honor, your opt-out. You
+              should also be aware that blocking cookies on your computer will
+              not affect your consent choices on a different device, such as a
+              mobile device. You may want to keep this in mind when determining
+              your browser cookie settings. For more information on how to
+              disable cookies on the most common browsers see below.
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <strong
+                >Google Chrome
+                <a
+                  href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&amp;hl=en-GB"
+                  target="_blank"
+                  >(Google Support)</a
+                >:</strong
+              >
+              <ul>
+                <li>At the top right, click "⋮" icon, and then Settings.</li>
+                <li>At the bottom, click Advanced.</li>
+                <li>
+                  Under "Privacy and security", click Site settings and then
+                  Cookies.
+                </li>
+                <li>
+                  Turn Allow sites to save and read cookie data on or off.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong
+                >Apple Safari (<a
+                  href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac"
+                  target="_blank"
+                  >Apple Support</a
+                >):</strong
+              >
+              <ul>
+                <li>
+                  On Mac:
+                  <ul>
+                    <li>Safari &gt; Preferences, click "Privacy"</li>
+                  </ul>
+                </li>
+                <li>
+                  On iOS:
+                  <ul>
+                    <li>
+                      Settings &gt; Safari, then turn on "Block All Cookies"
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong
+                >Mozilla Firefox (<a
+                  href="https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox"
+                  target="_blank"
+                  >Mozilla Support</a
+                >):</strong
+              >
+              <ul>
+                <li>Click the menu button "☰" and select "Preferences".</li>
+                <li>
+                  Select the "Privacy &amp; Security" panel and go to the
+                  "Cookies and Site Data" section
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong
+                >Microsoft Edge (<a
+                  href="https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd"
+                  target="_blank"
+                  >Microsoft Support</a
+                >):</strong
+              >
+              <ul>
+                <li>More button "⋯" &gt; Settings.</li>
+                <li>Select "View Advanced Settings".</li>
+                <li>
+                  Under "Privacy and security", click Site settings and then
+                  Cookies.
+                </li>
+                <li>Under "Privacy and Services" &gt; "Cookies"</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Other Options for Disabling Online Tracking.</strong>
+              Blocking cookies in your browser may not prevent cross-site
+              tracking of your online activity using other online tracking
+              technologies. In addition to managing your cookie settings for
+              your browser, you can opt-out of tracking directly with the
+              businesses that operate the tracking technologies. To opt-out of
+              certain analytic tracking by our service providers visit the links
+              below:
+              <p><strong>Helpful Links:</strong></p>
+              <ul>
+                <li>
+                  Google Analytics:
+                  <a
+                    href="https://tools.google.com/dlpage/gaoptout"
+                    target="_blank"
+                    >https://tools.google.com/dlpage/gaoptout</a
+                  >
+                </li>
+                <li>
+                  Bing:
+                  <a
+                    href="https://about.ads.microsoft.com/en-us/resources/policies/personalized-ads"
+                    target="_blank"
+                    >https://about.ads.microsoft.com/en-us/resources/policies/personalized-ads</a
+                  >,
+                  <a href="http://choice.microsoft.com/"
+                    >http://choice.microsoft.com/</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Do Not Track.</strong> Some web browsers may transmit "do
+              not track" signals (go
+              <a href="https://allaboutdnt.com/" target="_blank">here</a> to
+              learn more). Web browsers may incorporate or activate these
+              features differently, making it unclear if users have consciously
+              activated them. As a result, we do not take steps to respond to
+              such signals.
+            </li>
+            <li class="anchor-header" id="european-visitors">
+              <strong>European Visitors.</strong> In connection with the General
+              Data Protection Regulation (GDPR) applicable in the European
+              Economic Area (EEA), we eliminate or limit the use of cookies and
+              similar technologies with visitors from the EEA (excluding our
+              corporate website available at www.mediaalpha.com, which continues
+              to use cookies for all users with proper consent (see more
+              information below)). Specifically:
+              <ul>
+                <li>
+                  If you visit a third-party site that uses our services, we
+                  will not place any cookies on your device unless you have
+                  provided your consent and were provided with notice of our
+                  privacy practices and your ability to opt-out at any time.
+                </li>
+                <li>
+                  We will not seek your consent to use cookies in this instance,
+                  though the advertiser or their website publisher may do so.
+                </li>
+                <li>
+                  If you visit one of our websites, we will only place limited
+                  third-party cookies, such as those made available for
+                  analytics purposes by Google and Bing. In this case, we will
+                  seek your consent to use these third-party cookies and will
+                  only do so after you indicate your consent. If you do not
+                  consent, then no cookies will be written to your device.
+                </li>
+                <li>
+                  If you are visiting our corporate website, mediaalpha.com, for
+                  the first time, or the first time after we make a material
+                  change, we will seek your consent to use cookies.
+                </li>
+                <li>
+                  If you do not consent, you will still be able to use our
+                  websites, but certain functionality may be limited. To enable
+                  this feature, we use third-party tools to determine your
+                  geographic location; if these tools indicate that you are in
+                  the EEA, then we treat your visit as above. If you feel that
+                  you are subject to GDPR, but we have nonetheless used cookies
+                  in connection with your visit without consent (which may be
+                  due to a failure of the third party geolocation tools, your
+                  use of a proxy server, your location outside of the EEA at the
+                  time of your visit, or some other factor beyond our control)
+                  please notify us through our
+                  <a
+                    href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns#contact-us"
+                    >Privacy Center</a
+                  >
+                  (select “Contact Us” in the dropdown menu of the submission
+                  form) and make sure to include any relevant details so that we
+                  can ensure proper treatment of your data under GDPR.
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <h2 id="special-notice-california">Your Privacy Rights</h2>
+
+          <p>
+            To manage or make choices about the personal information (as known
+            as personal data) we have about you, review Your Choices and
+            Controls. If you are a resident of California, Nevada, Colorado,
+            Connecticut, Utah, Virginia, or a citizen of a European Economic
+            Area (EEA) Member State, review the applicable sections below to
+            learn more about your privacy rights. If you are a parent or legal
+            guardian or a representative, review the sections identified below
+            to learn more about how you may exercise rights on behalf of your
+            child or another person.
+          </p>
+
+          <p>
+            When we use the term “personal information” (also known as personal
+            data) in this Policy, we mean information that identifies, relates
+            to, describes, is reasonably capable of being associated with, or
+            could reasonably be linked, directly or indirectly, to an individual
+            or household. It does not include aggregated, anonymized, or
+            de-identified information (subject to applicable laws, rules, or
+            regulations) that is maintained in a form that is not capable of
+            being associated with or reasonably linked to an individual.
+          </p>
+
+          <ul>
+            <li class="anchor-header" id="state-specific-disclosures">
+              <strong>State Specific Disclosures.</strong> The following State
+              Specific Disclosures supplement the above information in this
+              Policy by providing additional information about our personal
+              information practices relating to individual residents of the
+              States of California, Colorado, Connecticut, Nevada, Utah, and
+              Virginia. Unless otherwise expressly stated, all terms defined and
+              used in this Policy retain the same meaning in these disclosures.
+              <ul>
+                <li>
+                  <strong
+                    >Rights Regarding the Personal Information We May Have About
+                    You.</strong
+                  >
+                  Depending on your state of residence, you may have the
+                  following rights:
+                  <ul>
+                    <li>
+                      Right to delete personal information we have collected
+                      about you;
+                    </li>
+                    <li>
+                      Right to correct inaccurate personal information we have
+                      collected about you;
+                    </li>
+                    <li>
+                      Right to access and receive a copy of the personal
+                      information we collected about you;
+                    </li>
+                    <li>
+                      Right to opt-out of the sale or sharing of the personal
+                      information we have collected about you;
+                    </li>
+                    <li>
+                      Right to limit the use or disclosure of the sensitive
+                      personal information we have collected about you; and
+                    </li>
+                    <li>
+                      Right to know certain information about our data practices
+                      in the preceding 12 months.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Your Right to Know.</strong> Depending on your state
+                  of residence, you may have the right to know about what
+                  personal information we collect and the sources from which we
+                  collect (it including sensitive personal information), how we
+                  use the personal information we collect and for what business
+                  purposes we use it, how, when, and with whom we share the
+                  personal information we collect, and the criteria we use to
+                  determine the length of time we intend to retain personal
+                  information. We provide this information in this Policy (with
+                  additional details provided below). We may also provide
+                  additional notices and disclosures to you at the point of
+                  collection. For example, as part of the consent language on
+                  our web forms, the cookie pop-up notices on our websites, and
+                  the disclosures and notices we read to you when you call us or
+                  when we call you. In this Policy, to learn more about:
+                  <ul>
+                    <li>
+                      What categories of personal information we collect and the
+                      categories of sources from which we collect such
+                      information, review
+                      <a href="#what-info-and-source"
+                        >What information do we collect and from what
+                        sources?</a
+                      >.
+                    </li>
+                    <li>
+                      What categories of sensitive personal information we
+                      collect and how we use this information, review
+                      <a href="#sensitive-personal-info-categories"
+                        >What are the categories of sensitive personal
+                        information you provide and we collect when you use our
+                        web forms, when you call us, or when we call or text
+                        you?</a
+                      >.
+                    </li>
+                    <li>
+                      How we use and the business purposes for which we use the
+                      categories of information we collect, review
+                      <a href="#how-we-use-your-information"
+                        >How and for what business purposes do we use the
+                        information we collect?</a
+                      >.
+                    </li>
+                    <li>
+                      How, when, and with what categories of parties we share
+                      the information we collect, review
+                      <a href="#sharing-information-info"
+                        >How, when, and with whom do we share the information we
+                        collect?</a
+                      >.
+                    </li>
+                    <li>
+                      The criteria we use to determine the length of time we
+                      intend to retain each category of personal information we
+                      collect about you, review
+                      <a href="#how-long-do-we-keep-the-info"
+                        >How long do we keep the information we collect about
+                        you?</a
+                      >.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong
+                    >Your Right to Access and Receive a Copy of the Personal
+                    Information We Have About You.</strong
+                  >
+                  Depending on your state of residence, you may have the right
+                  to request the following from us:
+                  <ul>
+                    <li>
+                      Specific pieces of personal information we collected about
+                      you;
+                    </li>
+                    <li>
+                      Categories of personal information we collected about you;
+                    </li>
+                    <li>
+                      Categories of sources from which the personal information
+                      is collected;
+                    </li>
+                    <li>
+                      Categories of personal information we sold or disclosed
+                      for a business purpose about you;
+                    </li>
+                    <li>
+                      Categories of third parties to whom the personal
+                      information was sold or disclosed for a business purpose;
+                      and
+                    </li>
+                    <li>
+                      The business purpose for collecting or selling personal
+                      information.
+                    </li>
+                  </ul>
+                </li>
+                <li class="anchor-header" id="do-not-sell-information">
+                  <strong
+                    >WE DO NOT SELL OR SHARE YOUR PERSONAL INFORMATION.</strong
+                  >
+                  Depending on your state of residence and subject to certain
+                  exceptions, the right to opt-out may include the right to
+                  direct a business that collects your personal information to
+                  not “sell” your personal information to third parties for
+                  monetary or other valuable consideration or “share” your
+                  personal information to third parties for cross-context
+                  behavioral advertising purposes and targeted advertising
+                  purposes. As described in
+                  <a href="#how-we-use-your-information"
+                    >How and for what business purposes do we use the
+                    information we collect?</a
+                  >
+                  and
+                  <a href="#sharing-information-info"
+                    >How, when, and with whom do we share the information we
+                    collect?</a
+                  >, and subject to the limitations we describe in this Policy,
+                  we may share your personal information for the described
+                  business purposes with strict restrictions on how our network
+                  of advertisers, business partners, and other third parties can
+                  use and disclose the information we provide, at your
+                  direction, or in ways that are otherwise in accordance with
+                  applicable laws, rules, and regulations. We do not sell or
+                  share any of your personal information.
+                </li>
+                <li>
+                  <strong
+                    >LIMIT THE USE OR DISCLOSURE OF YOUR SENSITIVE PERSONAL
+                    INFORMATION.</strong
+                  >
+                  Depending on your state of residence and subject to certain
+                  exceptions, you may have the right to limit the use or
+                  disclosure of the categories of sensitive personal information
+                  a business collects about you. When you use our marketplaces
+                  to request health insurance rates or quotes from our network
+                  of advertisers or to learn more about their health insurance
+                  products and services, the questions we ask you may reveal a
+                  physical or mental health diagnosis or condition. This
+                  information may be considered sensitive personal information
+                  under applicable laws, rules, and regulations. We use this
+                  information (as more fully described in
+                  <a href="#how-we-use-your-information"
+                    >How and for what business purposes do we use the
+                    information we collect?</a
+                  >) to provide our services to you, to enter into and perform
+                  our Terms of Use with you, to comply with legal and regulatory
+                  requirements, to protect the life or physical safety of you or
+                  others, or as otherwise permissible for our internal business
+                  purposes consistent with applicable laws, rules, and
+                  regulations. We do not sell your sensitive information. We do
+                  not process or otherwise share sensitive information for the
+                  purpose of cross-context behavioral advertising or targeted
+                  advertising. The agreements we have with our network of
+                  advertisers and our business partners require them to secure
+                  any personal information we provide to them, limit how they
+                  use such information, and comply with national, state, and
+                  other applicable privacy regulations. If at any time you wish
+                  to request that we delete your personal information, or revoke
+                  the consent you gave us or object to our processing of your
+                  personal information, or if you would like to submit any other
+                  request regarding your personal information, you may do so at
+                  any time by submitting a request in our
+                  <a
+                    href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                    >Privacy Center</a
+                  >, or by emailing us at dpo@mediaalpha, or by calling us at
+                  1-833-549-0351.
+                </li>
+                <li>
+                  <strong>How to Exercise Your Rights With Us.</strong> To
+                  exercise any of the above rights, please submit a request to
+                  us in our
+                  <a
+                    href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                    >Privacy Center</a
+                  >, or by email at DPO@mediaalpha.com, or call us at
+                  1-833-549-0351. In the request, please specify which right you
+                  are seeking to exercise and the scope of the request. We will
+                  confirm receipt of your request within 10 days. We may also
+                  ask you for specific information to verify and process your
+                  request. Keep in mind, if we do not have information that
+                  permits us to verify your identity, we may deny your requests
+                  to know or delete.
+                </li>
+                <li>
+                  <strong
+                    >How to Use an Authorized Agent to Submit Your Rights
+                    Requests.</strong
+                  >
+                  In certain circumstances, you may be permitted to use an
+                  authorized agent to submit your rights requests to us on your
+                  behalf through the designated methods details in this Policy
+                  where we can verify the authorized agent's authority to act on
+                  your behalf. In order to verify the authorized agent’s
+                  authority, we generally require evidence of either: (i) a
+                  valid power of attorney; or (ii) a signed letter containing
+                  your name and contact information, the name and contact
+                  information of the authorized agent, and a statement of
+                  authorization for the request. Depending on the evidence
+                  provided and your state of residency, we may still need to
+                  separately reach out to you to confirm the authorized agent
+                  has permission to act on your behalf and to verify your
+                  identity in connection with the request.
+                </li>
+                <li>
+                  <strong>Right to Non-Discrimination.</strong> Should you wish
+                  to exercise your rights, we will not discriminate against you
+                  by showing you different products or services based solely
+                  upon your request. Kindly note, however, if the advertisers
+                  require additional data or information from you before
+                  providing quotes, rates, or other information, exercising your
+                  rights may limit the number and range of advertisers who are
+                  displayed in response to your request.
+                </li>
+                <li>
+                  <strong>Right to Appeal.</strong> Depending on your state of
+                  residence, you may be able to appeal a decision we have made
+                  in connection with your privacy rights request. You may appeal
+                  any decision related to your privacy request via our
+                  <a
+                    href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                    >Privacy Center</a
+                  >
+                  or by sending us an email to dpo@mediaalpha.com.
+                </li>
+                <li>
+                  <strong>California's "Shine the Light" law.</strong>
+                  California residents may, no more than once per calendar year,
+                  request from us information about our disclosure of certain
+                  categories of personal information to third parties for direct
+                  marketing purposes. To be valid, requests must be submitted to
+                  us in our
+                  <a
+                    href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                    >Privacy Center</a
+                  >
+                  and select the “Shine the Light Request” option from the drop
+                  down menu. We will provide you within 30 days of receiving
+                  your request, a list of the categories of personal information
+                  disclosed to third parties for direct marketing purposes
+                  during the immediately preceding calendar year and the names
+                  and addresses of the third parties.
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul>
+            <li class="anchor-header" id="international-disclosures">
+              <strong
+                >International Disclosures (Visitors Outside the United
+                States).</strong
+              >
+              This Policy is intended to cover collection of information from
+              residents of the United States. The data protection and other laws
+              of the United States might not be as comprehensive as those in
+              your country. By visiting our websites and web forms or otherwise
+              using our services in any other way, you acknowledge and agree
+              that your information may be transferred to our facilities and
+              those third parties with whom we share it as described in this
+              Policy, regardless of the laws of your country of residence. To
+              the extent the laws of another jurisdiction apply to your data or
+              use of our services, we will comply with such laws. For example,
+              for European Visitors, read the
+              <a href="#european-visitors">European Visitors</a> section of
+              <a href="#cookies-and-technologies"
+                >Cookies and Other Technologies</a
+              >
+              to learn more about our use of cookies and similar technologies
+              with visitors from the EEA.
+            </li>
+            <li>
+              <strong>Children's Information.</strong> As noted in our Terms of
+              Use, you must be at least 18 years old to use our services. We do
+              not knowingly collect, use, or disclose personal information from
+              individual under 18 years of age. If you are under 18, you can use
+              the services offered on our websites only with your parent or
+              guardian. Please see our
+              <a href="/terms-and-condition.html">Terms of Use</a>
+              for more information.
+            </li>
+            <li>
+              <strong>Household Information.</strong> In some instances, our
+              marketplaces allow you to submit information about you and other
+              members of your family including your children in order to process
+              your request for a quote and rates (see
+              <a href="#how-we-use-your-information"
+                >How and for what business purposes do we use the information we
+                collect?</a
+              >
+              to learn more). When you submit such information to us you
+              represent and warrant that (i) you are the parent or legal
+              guardian of the child/children or that you have legal authority to
+              submit each child's information, and (ii) you are authorized to
+              submit any other family members' information to us, to process
+              your request and for it to be used by us and advertisers as
+              outlined in this Policy.
+            </li>
+          </ul>
+
+          <h2 id="choices-and-control">Your Choices and Controls</h2>
+
+          <p>
+            We want you to be able to make the privacy choices that are right
+            for you. Below and in our
+            <a
+              href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+              >Privacy Center</a
+            >, we provide you with information and tools to help you manage the
+            information we have about you. Keep in mind that each option made
+            available to you is subject to applicable legal limitations.
+            Additionally, because your privacy is important to us, we will ask
+            you to verify your identity/request or provide additional
+            information before we let you exercise your choices over the
+            information we have about you. We may also reject your request for
+            several reasons, including, by way of example only, if the request
+            risks the privacy of other persons or is unlawful.
+          </p>
+
+          <p>
+            You have the following options available to you to manage the
+            information we collect from you and have about you:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Access and Portability.</strong> You may access and
+              receive a copy of the information we have about you by submitting
+              a request in our
+              <a
+                href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                >Privacy Center</a
+              >
+              (simply select “Access My Personal Information” from the drop down
+              menu and complete and submit the form). You may also submit your
+              request to us by emailing us at DPO@mediaalpha.com or by calling
+              us at 1-833-549-0351.
+            </li>
+            <li>
+              <strong
+                >Correction or Modify (also known as rectification).</strong
+              >
+              You may correct or modify the information we have about you by
+              submitting a request in our
+              <a
+                href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                >Privacy Center</a
+              >
+              (simply select “Correct or Modify My Personal Information” from
+              the drop down menu and complete and submit the form). You may also
+              submit your request to us by emailing us at DPO@mediaalpha.com or
+              by calling us at 1-833-549-0351.
+            </li>
+            <li>
+              <strong>Deletion (also known as erasure).</strong> If for some
+              reason you ever want us to delete the information we have about
+              you, you may submit such a request in our
+              <a
+                href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                >Privacy Center</a
+              >
+              (simply select “Delete My Personal Information” from the drop down
+              menu and complete and submit the form). You may also submit your
+              request to us by emailing us at DPO@mediaalpha.com or by calling
+              us at 1-833-549-0351.
+            </li>
+            <li>
+              <strong>Revoke Consent or Object to Processing.</strong> You may
+              revoke the consent you gave to us or object to our processing of
+              the information we have about you by submitting a request in our
+              <a
+                href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                >Privacy Center</a
+              >
+              (simply select “Revoke My Consent or Object to Processing of My
+              Personal Information” from the drop down menu and complete and
+              submit the form). You may also submit your request to us by
+              emailing us at DPO@mediaalpha.com or by calling us at
+              1-833-549-0351. If you are seeking to unsubscribe to our emails or
+              change your communication preferences, see below.
+            </li>
+            <li>
+              <strong>Marketing and Communication Preferences.</strong> If you
+              wish to unsubscribe to any email communications we send to you,
+              simply select “unsubscribe” in the emails. If you wish to
+              unsubscribe to any text messages we send to you, text “STOP” in
+              reply to any text message you receive from us. If you wish to
+              unsubscribe or change/update any communication preferences with us
+              including calls or mail, submit a request in our
+              <a
+                href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns"
+                >Privacy Center</a
+              >
+              by selecting "Marketing and Communication Preferences" from the
+              drop down menu and then complete and submit the form. Please note
+              that we only control our own mailing and marketing
+              lists/subscriptions and policies. Third parties that maintain
+              their own marketing lists may send communications that advertise
+              our services. You must contact these parties directly in order to
+              stop receiving their communications.
+            </li>
+            <li>
+              <strong>Cookies and other Tracking Technologies.</strong> To learn
+              more about your choices and how to exercise control over the
+              information we collect from you automatically using cookies and
+              other technologies, read
+              <a href="#cookies-and-technologies"
+                >Cookies and Other Technologies</a
+              >.
+            </li>
+          </ul>
+
+          <p>
+            If you have any questions or need assistance, you may contact us by
+            sending a message through our
+            <a
+              href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns#contact-us"
+              >Privacy Center</a
+            >
+            (select "Contact Us" in the dropdown menu of the submission form),
+            email us at DPO@mediaalpha.com, or call us at 1-833-549-0351.
+          </p>
+
+          <h2 id="revisions-privacy-policy">Revisions to the Privacy Policy</h2>
+
+          <p>
+            We may change this Policy from time to time. When we do, we'll let
+            you know by revising the date at the top of the Policy. We may also
+            provide you with additional notice (such as adding a statement to
+            our websites' homepages or adding “Updated” to the footer links to
+            our Policy (e.g., Updated Privacy Policy). We encourage you to
+            review this Policy whenever you use any of our websites and web
+            forms to ensure you are aware of our current privacy practices.
+          </p>
+
+          <h2 id="questions-and-suggestions">Questions and Suggestions</h2>
+
+          <p>
+            If you have any questions, concerns, or suggestions about our
+            Policy, you may contact us by sending a message through the
+            MediaAlpha
+            <a
+              href="//insurance.mediaalpha.com/content/privacy-center.html?;Lx_BkMIr8k7wc8vDXeD_aIg3ihPHzqZbar2TDsvoo7zvcWgmisypTh3qPIItrbE0tXqo-_Ns#contact-us"
+              >Privacy Center</a
+            >
+            (select “Contact Us” in the dropdown menu of the submission form) or
+            by mail at:
+          </p>
+
+          <p>
+            MediaAlpha<br />
+            Attention: DPO<br />
+            700 S. Flower St., Suite 640<br />
+            Los Angeles, CA 90017<br />
+          </p>
+        </div>
+
+        <!-- Modal Overlay -->
+        <style>
+          .maOverlayBg {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.25);
+            overflow-y: scroll;
+            z-index: 999;
+            display: none;
+          }
+
+          .maOverlay {
+            position: fixed;
+            left: 5%;
+            top: 15%;
+            bottom: 15%;
+            right: 5%;
+            background: white;
+            overflow-y: scroll;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+          }
+
+          .maOverlay__close {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            right: 9%;
+            top: 17%;
+            background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjI0LjUxMiAyMjQuNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyMjQuNTEyIDIyNC41MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMTAwMDI7IiBwb2ludHM9IjIyNC41MDcsNi45OTcgMjE3LjUyMSwwIDExMi4yNTYsMTA1LjI1OCA2Ljk5OCwwIDAuMDA1LDYuOTk3IDEwNS4yNjMsMTEyLjI1NCANCgkJMC4wMDUsMjE3LjUxMiA2Ljk5OCwyMjQuNTEyIDExMi4yNTYsMTE5LjI0IDIxNy41MjEsMjI0LjUxMiAyMjQuNTA3LDIxNy41MTIgMTE5LjI0OSwxMTIuMjU0IAkiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K");
+            background-size: 15px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+          }
+
+          .maOverlay__content {
+            width: 90%;
+            max-width: 1200px;
+            padding: 45px 15px;
+            margin: 0 auto;
+            text-align: center;
+          }
+
+          .maOverlay__image {
+            max-width: 100%;
+          }
+
+          @media (min-width: 768px) {
+            .maOverlay {
+              left: 10%;
+              top: 10%;
+              bottom: 10%;
+              right: 10%;
+            }
+
+            .maOverlay__close {
+              right: 12%;
+              top: 12%;
+            }
+
+            .maOverlay__close {
+              position: fixed;
+            }
+          }
+        </style>
+        <div class="maOverlayBg js-ma-overlay-bg js-ma-overlay-close">
+          <div class="maOverlay js-ma-overlay">
+            <div class="maOverlay__close js-ma-overlay-close"></div>
+            <div class="maOverlay__content">
+              <img class="maOverlay__image js-ma-overlay-image" src="" />
+            </div>
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const maOverlayBg = document.querySelector(".js-ma-overlay-bg");
+            const maOverlayClose = document.querySelector(
+              ".js-ma-overlay-close"
+            );
+            const maOverlayImage = document.querySelector(
+              ".js-ma-overlay-image"
+            );
+            const maOverlayLinks =
+              document.querySelectorAll("[data-tcpa-modal]");
+
+            for (let i = 0; i < maOverlayLinks.length; i++) {
+              maOverlayLinks[i].addEventListener("click", function () {
+                const imgUrl = this.getAttribute("data-tcpa-modal");
+
+                // set image src and show overlay
+                maOverlayImage.setAttribute("src", imgUrl);
+                maOverlayBg.style.display = "block";
+              });
+            }
+
+            maOverlayBg.addEventListener("click", function (e) {
+              // hide overlay and clear img src
+              if (e.target.classList.contains("js-ma-overlay-close")) {
+                maOverlayBg.style.display = "none";
+                maOverlayImage.setAttribute("src", "");
+              }
+            });
+          });
+        </script>
+        <!--  End Modal Overlay -->
+      </div>
+      <!-- Footer cta section -->
+    </main>
+    <!-- <section class="phoneBanner js-form-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 desktopOnly text-center">
+            <div class="phoneBanner-cta">
+              Would you prefer to speak with someone?
+            </div>
+            <div class="phoneBanner-phone">
+              Call <a href="tel:(844) 538-6414">(844) 538-6414</a> to speak with
+              an agent
+            </div>
+          </div>
+          <div class="col-12 mobileOnly text-center">
+            <div class="phoneBanner-cta">Speak to a Health Care Agent!</div>
+            <div class="phoneBanner-phone">
+              <a href="tel:(844) 538-6414">(844) 538-6414</a>
+            </div>
+          </div>
+          <div
+            class="col-12 phoneBanner-phone js-medicare-swap text-center"
+            style="display: none"
+          >
+            TTY users 711
+          </div>
+          <div
+            class="phoneBanner-phoneInfo js-medicare-swap col-12 text-center"
+            style="display: none"
+          >
+            <strong>Hours:</strong> 8am - 8pm, 7 days a week
+          </div>
+          <div class="col-12 phoneBanner-disclaimer"></div>
+        </div>
+      </div>
+    </section> -->
+    <footer class="globalFooter">
+      <div class="container no-padding">
+        <div class="top-separation-line"></div>
+        <div class="globalFooter-upperSection">
+          <div class="globalFooter-upperText">
+            <div class="globalFooter-termsAndPrivacy">
+              <p class="globalFooter-labelText">Speak to an Agent</p>
+              <p>
+                <a
+                  class="globalFooter-telephoneNumSmall"
+                  href="tel:(844) 538-6414"
+                  >(844) 538-6414 <br
+                /></a>
+                <span class="health-hours js-health-swap"
+                  >Mon-Fri: 8am-10pm EST <br />Sat-Sun: 9am-5pm EST</span
+                >
+              </p>
+              <p style="margin-top: 30px"></p>
+            </div>
+            <div class="globalFooter-termsAndPrivacy">
+              <p class="globalFooter-labelText">QuoteLab, LLC</p>
+              <p>
+                700 S. Flower St. <br />Suite 640 <br />Los Angeles, CA 90017
+              </p>
+            </div>
+          </div>
+          <div class="globalFooter-bottomText">
+            <div class="globalFooter-termsAndPrivacy">
+              <a href="#" target="_blank" class="globalFooter-labelText">
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="13.5"
+                  viewBox="0 0 16 13.5"
+                >
+                  <g transform="translate(0 -1.5)">
+                    <circle
+                      cx="1.75"
+                      cy="1.75"
+                      r="1.75"
+                      transform="translate(1 1.5)"
+                    ></circle>
+                    <circle
+                      cx="1.75"
+                      cy="1.75"
+                      r="1.75"
+                      transform="translate(11.5 1.5)"
+                    ></circle>
+                    <path
+                      d="M13.5,6a4.761,4.761,0,0,0-3.474,2.032,6.853,6.853,0,0,1-.879.868,1.666,1.666,0,0,1,.331,1.558A5.227,5.227,0,0,0,11,9.191V14a1,1,0,0,0,1,1h3a1,1,0,0,0,1-1V8.5A2.5,2.5,0,0,0,13.5,6Z"
+                    ></path>
+                    <path
+                      d="M7.8,9.25c-.693,0-1.144-.463-1.823-1.218A4.761,4.761,0,0,0,2.5,6,2.5,2.5,0,0,0,0,8.5V14a1,1,0,0,0,1,1H4a1,1,0,0,0,1-1V9.191A3.717,3.717,0,0,0,7.8,10.75a.75.75,0,1,0,0-1.5Z"
+                    ></path>
+                  </g>
+                </svg>
+                <p class="ms-2">Privacy Center</p>
+              </a>
+              <a href="#" target="_blank" class="globalFooter-labelText">
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16"
+                  width="16"
+                  viewBox="0 0 16 16"
+                >
+                  <g>
+                    <path
+                      data-color="color-2"
+                      d="M3,8.23822V4.5C3,3.12158,4.12109,2,5.5,2S8,3.12158,8,4.5v2.60498L9.05853,7.2226 C9.64032,6.46423,10,5.52753,10,4.5C10,2.01855,7.98145,0,5.5,0S1,2.01855,1,4.5C1,6.0567,1.79529,7.42993,3,8.23822z"
+                    ></path>
+                    <path
+                      d="M13.89996,16l1.0661-3.55365c0.53821-1.79388-0.68073-3.6369-2.54218-3.84369L7,8V4.5 C7,3.67157,6.32843,3,5.5,3S4,3.67157,4,4.5V12H3v-2H2.5C1.67157,10,1,10.67157,1,11.5v1.83331 C1,14.28296,1.28461,15.20221,1.78973,16H13.89996z"
+                    ></path>
+                  </g>
+                </svg>
+                <p class="ms-2">
+                  Your Privacy Choices
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    id="Layer_1"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 30 14"
+                    height="12px"
+                    width="27px"
+                    style="enable-background: new 0 0 30 14; width: 27.5px"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <g id="final---dec.11-2020_1_">
+                        <g
+                          id="_x30_208-our-toggle_2_"
+                          transform="translate(-1275.000000, -200.000000)"
+                        >
+                          <g
+                            id="Final-Copy-2_2_"
+                            transform="translate(1275.000000, 200.000000)"
+                          >
+                            <path
+                              style="
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #ffffff;
+                              "
+                              d="M7.4,12.8h6.8l3.1-11.6H7.4C4.2,1.2,1.6,3.8,1.6,7S4.2,12.8,7.4,12.8z"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                      <g id="final---dec.11-2020">
+                        <g
+                          id="_x30_208-our-toggle"
+                          transform="translate(-1275.000000, -200.000000)"
+                        >
+                          <g
+                            id="Final-Copy-2"
+                            transform="translate(1275.000000, 200.000000)"
+                          >
+                            <path
+                              style="
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #0066ff;
+                              "
+                              d="M22.6,0H7.4c-3.9,0-7,3.1-7,7s3.1,7,7,7h15.2c3.9,0,7-3.1,7-7S26.4,0,22.6,0z M1.6,7c0-3.2,2.6-5.8,5.8-5.8      h9.9l-3.1,11.6H7.4C4.2,12.8,1.6,10.2,1.6,7z"
+                            ></path>
+                            <path
+                              id="x"
+                              style="fill: #ffffff"
+                              d="M24.6,4c0.2,0.2,0.2,0.6,0,0.8l0,0L22.5,7l2.2,2.2c0.2,0.2,0.2,0.6,0,0.8c-0.2,0.2-0.6,0.2-0.8,0      l0,0l-2.2-2.2L19.5,10c-0.2,0.2-0.6,0.2-0.8,0c-0.2-0.2-0.2-0.6,0-0.8l0,0L20.8,7l-2.2-2.2c-0.2-0.2-0.2-0.6,0-0.8      c0.2-0.2,0.6-0.2,0.8,0l0,0l2.2,2.2L23.8,4C24,3.8,24.4,3.8,24.6,4z"
+                            ></path>
+                            <path
+                              id="y"
+                              style="fill: #0066ff"
+                              d="M12.7,4.1c0.2,0.2,0.3,0.6,0.1,0.8l0,0L8.6,9.8C8.5,9.9,8.4,10,8.3,10c-0.2,0.1-0.5,0.1-0.7-0.1l0,0      L5.4,7.7c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0l0,0L8,8.6l3.8-4.5C12,3.9,12.4,3.9,12.7,4.1z"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </p>
+              </a>
+              <a href="#" target="_blank" class="globalFooter-labelText">
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8,0a8,8,0,1,0,8,8A8.024,8.024,0,0,0,8,0ZM5,11a.945.945,0,0,1-1-1A.945.945,0,0,1,5,9a.945.945,0,0,1,1,1A.945.945,0,0,1,5,11ZM7,6A.945.945,0,0,1,6,5,.945.945,0,0,1,7,4,.945.945,0,0,1,8,5,.945.945,0,0,1,7,6Zm4,4a.945.945,0,0,1-1-1,.945.945,0,0,1,1-1,.945.945,0,0,1,1,1A.945.945,0,0,1,11,10Z"
+                  ></path>
+                </svg>
+                <p class="ms-2">Cookies and Other Technologies</p>
+              </a>
+              <a
+                href="/terms-and-condition.html"
+                target="_blank"
+                class="globalFooter-labelText"
+              >
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="15.998"
+                  viewBox="0 0 16 15.998"
+                >
+                  <g transform="translate(0 0)">
+                    <path
+                      d="M16,1a1,1,0,0,0-1-1H10.45A4.47,4.47,0,0,0,7.268,1.318L3.293,5.293a1,1,0,0,0,0,1.414,2.6,2.6,0,0,0,3.437.214l2.687-2.09L13.61,9.024a1.2,1.2,0,0,1-.069,1.761l-.566.483L11.354,9.646a.5.5,0,0,0-.708.708l1.566,1.565-.855.731-1.5-1.5a.5.5,0,1,0-.708.708L10.594,13.3l-.138.118a1.988,1.988,0,0,1-1.824.407,1.981,1.981,0,0,0-.57-1.24L4.477,9a2,2,0,0,0-2.829,2.828l3.586,3.586a2,2,0,0,0,2.542.234,4.017,4.017,0,0,0,1.376.253,3.977,3.977,0,0,0,2.608-.965l3.08-2.63a3.108,3.108,0,0,0,1.16-2.3Z"
+                    ></path>
+                    <path
+                      d="M2,7V2H5A1,1,0,1,0,5,0H1A1,1,0,0,0,0,1V7A1,1,0,1,0,2,7Z"
+                    ></path>
+                  </g>
+                </svg>
+                <p class="ms-2">Terms of Use</p>
+              </a>
+            </div>
+
+            <div class="globalFooter-termsAndPrivacy">
+              <a href="#" target="_blank" class="globalFooter-labelText">
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15.96"
+                  height="15.893"
+                  viewBox="0 0 15.96 15.893"
+                >
+                  <g transform="translate(-0.053 -0.048)">
+                    <path
+                      d="M3.6,9.6v4.9a.741.741,0,0,0,1.3.5l2.3-2.7,4.7,3.5a.7.7,0,0,0,1.1-.4L16,.9a.714.714,0,0,0-1-.8L.5,5.9A.8.8,0,0,0,.3,7.2L1.9,8.4,6.5,6.2c.4-.2.7.3.4.5Z"
+                    ></path>
+                  </g>
+                </svg>
+                <p class="ms-2">Contact Us</p>
+              </a>
+              <a href="#" class="globalFooter-labelText">
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12,10a2.994,2.994,0,0,0-2.5,1.347,3.42,3.42,0,0,0-3,0,3.007,3.007,0,1,0,.455,2.106,1.522,1.522,0,0,1,2.092,0A3,3,0,1,0,12,10ZM4,14a1,1,0,1,1,1-1A1,1,0,0,1,4,14Zm8,0a1,1,0,1,1,1-1A1,1,0,0,1,12,14Z"
+                  ></path>
+                  <path d="M12.8,4,12,0H4L3.2,4Z"></path>
+                  <path d="M13,5H3L0,8H16Z"></path>
+                </svg>
+                <p class="ms-2">Privacy Policy</p>
+              </a>
+              <a href="#" target="_blank" class="globalFooter-labelText">
+                <svg
+                  class="globalFooter-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15.665"
+                  height="16"
+                  viewBox="0 0 15.665 16"
+                >
+                  <g transform="translate(-0.335 0)">
+                    <path
+                      d="M15,2a1,1,0,0,0-1,1V7a.5.5,0,0,1-.5.5h0A.5.5,0,0,1,13,7V1.553a1.037,1.037,0,0,0-.832-1.04A1,1,0,0,0,11,1.5V7a.5.5,0,0,1-.5.5h0A.5.5,0,0,1,10,7V1.053A1.037,1.037,0,0,0,9.168.014,1,1,0,0,0,8,1V7a.5.5,0,0,1-.5.5h0A.5.5,0,0,1,7,7V1.553A1.037,1.037,0,0,0,6.168.514,1,1,0,0,0,5,1.5V9.293a.5.5,0,0,1-.854.354l-2-2A1.081,1.081,0,0,0,.911,7.4,1.032,1.032,0,0,0,.469,8.834L2.78,12.942A6,6,0,0,0,8.009,16H10a6,6,0,0,0,6-6V3A1,1,0,0,0,15,2Z"
+                    ></path>
+                  </g>
+                </svg>
+                <p class="ms-2">California Privacy Choices</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="separation-line"></div>
+        <section id="footerDisclaimer" class="footerDisclaimer">
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const defaultMedicarePlan =
+                'TPMO Disclaimer: We do not offer every plan available in your area.  Currently we represent [73] organizations which offer [5110] products in your area. Please contact <a href="https://www.medicare.gov/" target="_blank" rel=”nofollow”>Medicare.gov</a> or 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options.<br>Please note that these numbers provided are not specific to your area but rather represent the number of organizations and the number of products available on a national basis. We will connect you with licensed insurance agents who can provide information about the number of organizations they represent and the number of products they offer in your service area.';
+
+              $("body").on("get-medicare-disclaimer", function (event, zip) {
+                if (zip) {
+                  $.getJSON(
+                    "//insurance.mediaalpha.com/medicare-plans.json" +
+                      "?zip=" +
+                      zip +
+                      "&placement_id=" +
+                      "UhjXj9Xn-j2WV29jKxM3B5ntfrnQnQ" +
+                      "&api_token=" +
+                      "ABIROAAAAAAAAAEGV6O7QQ2TKU" +
+                      "&plan_type=local ppo&plan_type=hmo&plan_type=msa&plan_type=Regional PPO&plan_type=PFFS",
+                    function (data) {
+                      if (data && data.num_plans) {
+                        const medicarePlan =
+                          "TPMO Disclaimer: We do not offer every plan available in your area.  Currently we represent [" +
+                          data.num_organizations +
+                          "] organizations which offer [" +
+                          data.num_plans +
+                          '] products in your area. Please contact <a href="https://www.medicare.gov/" target="_blank" rel=”nofollow”>Medicare.gov</a> or 1-800-MEDICARE , or your local State Health Insurance Program (SHIP) to get information on all of your options.';
+                        $(".js-medicare-plan").html(medicarePlan);
+                      } else {
+                        $(".js-medicare-plan").html(defaultMedicarePlan);
+                      }
+                    }
+                  );
+                } else {
+                  $(".js-medicare-plan").html(defaultMedicarePlan);
+                }
+              });
+
+              let currentZip = oo.getParam("zip") ? oo.getParam("zip") : null;
+              $("body").trigger("get-medicare-disclaimer", [currentZip]);
+            });
+          </script>
+          <style>
+            .footerDisclaimer-arrow {
+              transform: rotate(90deg);
+              display: inline-block;
+            }
+
+            @media (min-width: 768px) {
+              .footerDisclaimer-arrow {
+                display: none;
+              }
+            }
+            .footerDisclaimer-medicare {
+              display: none;
+            }
+          </style>
+
+          <div
+            class="footerDisclaimer-title"
+            data-bs-toggle="collapse"
+            data-bs-target=".disclaimerBox"
+            data-toggle="collapse"
+            data-target=".disclaimerBox"
+            role="button"
+            aria-expanded="false"
+          >
+            <p>
+              <strong class="footerDisclaimer-health js-health-swap">
+                Important Information:
+                <svg
+                  version="1.1"
+                  class="footerDisclaimer-arrow mobileOnly"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 330 512"
+                  style="enable-background: new 0 0 330 512"
+                  xml:space="preserve"
+                  width="10"
+                  height="10"
+                >
+                  <g>
+                    <polygon
+                      points="0,72 72,0 330,256 74,512 0,438 186,256"
+                    ></polygon>
+                  </g>
+                </svg>
+              </strong>
+              <strong class="footerDisclaimer-medicare js-medicare-swap">
+                Disclaimer:
+                <svg
+                  version="1.1"
+                  class="footerDisclaimer-arrow mobileOnly"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 330 512"
+                  style="enable-background: new 0 0 330 512"
+                  xml:space="preserve"
+                  width="10"
+                  height="10"
+                >
+                  <g>
+                    <polygon
+                      points="0,72 72,0 330,256 74,512 0,438 186,256"
+                    ></polygon>
+                  </g>
+                </svg>
+              </strong>
+            </p>
+          </div>
+
+          <div class="disclaimerBox footerDisclaimer-text" role="tabpanel">
+            <div class="footerDisclaimer-medicare js-medicare-swap">
+              <p>
+                Plan availability varies by state, and not all brands are
+                available in all states through the brokerages or service
+                providers we may connect you with. Availability is subject to
+                regulatory differences and brokerage partnerships. We encourage
+                users to confirm the availability of specific brands with our
+                partnered brokerages. Information is subject to change and
+                cannot be guaranteed.
+              </p>
+
+              <p>
+                HealthPlans.com is operated by Quotelab, LLC, which is an
+                independent broker and is not a federal or state Marketplace
+                website. This website is owned and operated by QuoteLab, LLC, a
+                licensed insurance agency, NPN #19911386. Invitations for
+                application for health insurance on QuoteLab, LLC, only where
+                licensed and appointed. License numbers are available upon
+                request and are provided where required by law. QuoteLab's
+                license information can be found at
+                <a
+                  href="https://www.quotelab.com/licenses.html"
+                  target="_blank"
+                  rel="noopener"
+                  >https://www.quotelab.com/licenses.html</a
+                >.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Federal Contracting Statement: Plans are insured or covered by a
+                Medicare Advantage organization with a Medicare contract and/or
+                a Medicare-approved Part D sponsor. Enrollment in the plan
+                depends on the plan’s contract renewal with Medicare.
+              </p>
+              <p
+                class="footerDisclaimer-medicare js-medicare-swap js-medicare-plan"
+              >
+                TPMO Disclaimer: We do not offer every plan available in your
+                area. Currently we represent [73] organizations which offer
+                [5110] products in your area. Please contact
+                <a
+                  href="https://www.medicare.gov/"
+                  target="_blank"
+                  rel="”nofollow”"
+                  >Medicare.gov</a
+                >
+                or 1-800-MEDICARE, or your local State Health Insurance Program
+                (SHIP) to get information on all of your options.<br />Please
+                note that these numbers provided are not specific to your area
+                but rather represent the number of organizations and the number
+                of products available on a national basis. We will connect you
+                with licensed insurance agents who can provide information about
+                the number of organizations they represent and the number of
+                products they offer in your service area.
+              </p>
+              <p>
+                Submitting this form does NOT affect your current enrollment,
+                nor will it enroll you in a Medicare Advantage plan, Medicare
+                Prescription Drug plan, Medicare Supplement Plan, or any other
+                Medicare plan. QuoteLab, LLC is independent of the Medicare
+                program and is neither associated with nor endorsed by The
+                Centers for Medicare &amp; Medicaid Services (CMS) or any other
+                governmental agency.
+              </p>
+              <p>
+                The plans represented on HealthPlans.com are Medicare Advantage
+                HMO, PPO and PFFS organizations and stand-alone prescription
+                drug plans with a Medicare contract. Enrollment in any plan
+                depends on contract renewal. If you are paying Medicare Part B
+                premium, you must continue to pay it to maintain coverage.
+              </p>
+
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Not all plans offer all of these benefits. Benefits may vary by
+                carrier and location. Limitations and exclusions may apply.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Every year, Medicare evaluates plans based on a 5-star rating
+                system.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Part B Premium give-back is not available with all plans.
+                Availability varies by carrier and location. Actual Part B
+                premium reduction could be lower. Deductibles, copays and
+                coinsurance may apply.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Based on median Medicare Advantage benefit amounts for dental
+                available across multiple plans and metro areas. Not all
+                benefits available in specific plans or regions.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                This information is not a complete description of benefits.
+                Contact the plan for more information.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Limitations, copayments, and restrictions may apply.
+              </p>
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                [Benefits, premiums and/or copayments/coinsurance] may change on
+                January 1 of each year.
+              </p>
+
+              <p class="footerDisclaimer-medicare js-medicare-swap">
+                Enrollment in a plan may be limited to certain times of the year
+                unless you qualify for a special [election/enrollment] period or
+                you are in your Medicare Initial Election Period.
+              </p>
+
+              <p>Advertised Pricing:</p>
+
+              <p>
+                There are several factors that impact your monthly premium;
+                including your age, geographical location, annual income,
+                dependents, and the type of plan you choose. Monthly premiums do
+                not include out-of-pocket costs.
+              </p>
+            </div>
+
+            <div class="footerDisclaimer-health js-health-swap">
+              <p>
+                Plan availability varies by state, and not all brands are
+                available in all states through the brokerages or service
+                providers we may connect you with. Availability is subject to
+                regulatory differences and brokerage partnerships. We encourage
+                users to confirm the availability of specific brands with our
+                partnered brokerages. Information is subject to change and
+                cannot be guaranteed.
+              </p>
+
+              <p>
+                HealthPlans.com is operated by QuoteLab, LLC, which is an
+                independent broker and is not a federal or state insurance
+                Marketplace or other website. It does not provide access to any
+                federal or state marketplace or exchange. This website is owned
+                and operated by QuoteLab, LLC, a licensed insurance agency, NPN
+                #19911386. Invitations for application for health insurance are
+                made through QuoteLab, LLC, only where licensed and appointed.
+                License numbers are available upon request and are provided
+                where required by law. QuoteLab's license information can be
+                found at
+                <a
+                  href="https://www.quotelab.com/licenses.html"
+                  target="_blank"
+                  rel="noopener"
+                  >https://www.quotelab.com/licenses.html</a
+                >.
+              </p>
+
+              <p>
+                This website does not provide information about specific health
+                plans, or enable visitors to obtain insurance quotes, on this
+                website. However, if you provide your information and consent,
+                we will transfer your information to insurance carriers and
+                brokers that may contact you to offer Affordable Care Act (ACA)
+                plans, short-term plans, medical indemnity plans and/or
+                healthcare sharing ministry plans, and we will receive
+                compensation for such transfer. The advertisements appearing on
+                this website are placed by clients from which QuoteLab, LLC
+                receives compensation, and such compensation may impact whether
+                such advertisements appear on this website and the order in
+                which they appear.
+              </p>
+
+              <p>
+                HealthPlans.com is required to comply with all applicable
+                federal law, including the standards established under 45 CFR
+                155.220(c) and (d) and standards established under 45 CFR
+                155.260 to protect the privacy and security of personally
+                identifiable information. This website does not provide a
+                complete listing of, or display all data on all Qualified Health
+                Plans being offered in your state or service area through the
+                Marketplace website or the federal Medicare program. To see all
+                available data on Qualified Health Plan options in your state,
+                visit your state Marketplace website, go to the Health Insurance
+                Marketplace website at https://www.healthcare.gov.
+              </p>
+
+              <p>
+                This site uses cookies and tech to collect data needed for our
+                services to work including to process your requests, personalize
+                your experience, and measure the effectiveness of content we
+                show you, among other business purposes (<a
+                  href="#"
+                  target="_blank"
+                  >Learn More</a
+                >). We share this data with the business partners we connect you
+                with, who may combine it with data you provide to them or they
+                collect from you (<a href="#" target="_blank">Learn More</a>).
+                To learn more about cookies and how to disable them, read our
+                <a href="#" target="_blank">Privacy Policy</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+        <p class="globalFooter-copyrightText text-center">
+          Copyright ©2024 Quotelab, LLC
+          <span style="white-space: nowrap">All Rights Reserved.</span>
+        </p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./resources/form/js/bootstrap-multi-step-form.js"></script>
+  </body>
+</html>
